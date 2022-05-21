@@ -39,7 +39,52 @@
     <hr>
 
     <!-- Etiqueta de Imágenes -->
-    <img />
+    <!-- Imagen proveniente de la carpeta actual -->
+    <img src="cat.webp" height="100" />
+    <!-- Imagen proveniente del internet -->
+    <img src="https://www.pngkey.com/png/detail/14-148130_minion-imagenes-de-100x100-pixeles.png" height="100" />
+    <hr>
+
+    <!--
+        Etiqueta para formularios e interactuar con el user
+        *action="/ruta": Recibe la ruta hacia donde se guardará la información para ser receptada y manejada 
+        *method="GET": Envia los valores que se encuentran dentro de los campos a traves de la URL.
+        *method="POST": Envía los valores que se encuentran dentro de los campos de manera interna.
+    -->
+    <form action="/formulario" method="post">
+        <!-- FOR sirve para mandar un focus de label hacia el input -->
+        <label for="inpNombre">Nombre:</label>
+        <!--
+            TYPE define el comportamiento del input, tiene los siguientes valores:
+            *text (Defecto): Recibe información a traves de un bloque de texto.
+            *submit: Se convierte en un botón para enviar información.
+            *email: Recibe un texto con formato email a traves de bloque de texto.
+            *password: Recibe un texto tipo contraseña y lo oculta.
+            *radio: Se transforma en una casilla de selección unitaria.
+            *checkbox: Se transforma en una casilla de selección multiple.
+            *file: Espera recibir un archivo y da la opción de elegirlo desde carpeta.
+        -->
+        <!-- ID es el identificador del label, sirve para usar código interno en el. -->
+        <!-- 
+            NAME sirve para asignar la clave al input y una ves recibida 
+            una información en el input esta se guardará como su valor, es decir 
+            como si fuera un diccionario, con atributos con clave y valor. 
+        -->
+        <!-- PLACEHOLDER sirve para mostrar un mensaje por defecto en la barra de input -->
+        <!-- VALUE define un valor por defecto. -->
+        <input type="text" id="inpNombre" name="nombre" placeholder="Ingrese el nombre"/>
+        <br>
+        <label for="inpApellido">Apellido:</label>
+        <input type="text" id="inpApellido" name="apellido" placeholder="Ingrese el apellido"/>
+        <br>
+        <label for="comentario">Comentario:</label>
+        <!-- ROWS indica el tamaño vertical de la caja de comentarios. -->
+        <!-- COLS indica el tamaño horizontal de la caja de comentarios. -->
+        <textarea rows="5" cols="30" id="comentario" name="coment" placeholder="Ingrese comentario"></textarea>
+        <br>
+        <input type="submit"/>
+    </form>
+
 
 </body>
 </html>
