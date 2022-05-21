@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pruebas de HTML</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
     <!-- Etiqueta de línea de separación -->
@@ -57,7 +62,7 @@
         <!--
             TYPE define el comportamiento del input, tiene los siguientes valores:
             *text (Defecto): Recibe información a traves de un bloque de texto.
-            *submit: Se convierte en un botón para enviar información.
+            *submit: Se convierte en un botón para enviar toda la información en los campos.
             *email: Recibe un texto con formato email a traves de bloque de texto.
             *password: Recibe un texto tipo contraseña y lo oculta.
             *radio: Se transforma en una casilla de selección unitaria.
@@ -83,8 +88,75 @@
         <textarea rows="5" cols="30" id="comentario" name="coment" placeholder="Ingrese comentario"></textarea>
         <br>
         <input type="submit"/>
+        <br>
+        <!-- 
+            Etiqueta de Button es un boton que sirve para realizar acciones con la info de los campos
+            siendo esta, mucho más personalizable incluso se le puede poner imagenes dentro.
+            TYPE tiene los siguiente parámetros:
+            *button: Simplemente es un botón que su actividad puede ser programada con JavaScript
+            *reset: Settea el formulario con los valores por defecto 
+            *submit: Envia la información de los campos en el formulario
+        -->
+        <button type="button">Tipo botón</button>
+        <button type="submit">Tipo submit</button>
+        <button type="reset">Tipo Reset</button>
     </form>
+    <hr>
 
+    <!-- Etiqueta de listas no ordenadas -->
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+    </ul>
+    <hr>
+
+    <!-- Etiqueta de listas ordenadas -->
+    <ol>
+        <!-- En listas ordenadas con el parámetro VALUE, se puede indicar el número de comienzo -->
+        <li value="0">List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>
+            List item 4
+            <ol>
+                <li style="list-style-type:lower-alpha;">Sub list item 1</li>
+                <li style="list-style-type:lower-alpha;">Sub list item 2</li>
+                <li style="list-style-type:lower-alpha;">Sub list item 3</li>
+            </ol>
+        </li>
+    </ol>
+    <hr>
+
+    <!-- Etiqueta de tablas -->
+    <!-- Opcion <table style="border: 1px solid black;"> -->
+    <table style="width: 500px;">
+        <!-- Etiqueta para ubicar lógicamente la cabecera de la tabla -->
+        <thead>
+            <!-- Table row (Fila de tabla) -->
+            <tr>
+                <!-- Table Header (Cabecera o título de tabla) -->
+                <th>Título 1</th>
+                <th>Título 2</th>
+            </tr>
+        </thead>
+        <!-- Etiqueta para ubicar lógicamente el cuerpo de la tabla -->
+        <tbody>
+            <tr>
+                <!-- TD ingresa elementos standar en la tabla -->
+                <td>Elemento 1</td>
+                <td>Elemento 2</td>
+            </tr>
+            <tr>
+                <td>Otro elemt 1</td>
+                <td>Otro elemt 2</td>
+            </tr>
+        </tbody>
+        <!-- Etiqueta para ubicar lógicamente el pié de la tabla -->
+        <tfoot>
+            <td>Pie 1</td>
+            <td>Pie 2</td>
+        </tfoot>
+    </table>
 
 </body>
 </html>
