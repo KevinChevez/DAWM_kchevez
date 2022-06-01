@@ -1,0 +1,91 @@
+/*
+Selectores
+Para referirse a ID se debe poner "#" anterior al nombre del identificador de la etiqueta en el html
+*/
+#tituloPrincipal {
+    color: brown;
+}
+
+/*
+Para referirse a CLASS se debe poner "." anterior al nombre del identificador de la etiqueta en el html
+*/
+.texto {
+    color: blue;
+}
+
+/*Para referirse a class de etiquetas especificas*/
+p.especial {
+    color: chocolate;
+}
+
+/*Reducir y referise a una etiqueta especifida de una anidacion con selectores anidados*/
+div p {
+    color: darkgreen;
+}
+
+/*Para aplicar estilos a mas de una etiqueta o identificador de esta*/
+div h2, div h3 {
+    color: darkorange;
+}
+
+/*
+Aplicar estilo a todos los elementos del html pero solo aquellos que no han sido
+modificados por algun selector anteriormente en el mismo atributo.
+*/
+* {
+    text-align: center;
+}
+
+/*Aplicando propiedades de color en diferentes formatos*/
+#color1 {
+    color: #ff0000;
+}
+#color2 {
+    color: #f00;
+}
+#color3 {
+    color: red;
+}
+#color4 {
+    color: rgb(255, 0, 0);
+}
+
+/*
+Aplicando bordes al texto, el formato es el siguiente:
+border: (grosor)px color estiloDeBorde
+Los estilos de bordes son los siguientes:
+Modelos normales; dotted, dashed, solid, double
+Modelos en 3d; groove, ridge, inset, outset
+none, hidden
+*/
+#borde1 {
+    border: 5px green ridge;
+}
+
+/*
+Aplicando bordes al texto aplicandole estilos de manera separada.
+*/
+#borde2 {
+    border-style: groove;
+    border-color: blueviolet;
+    border-radius: 5px;
+    border-width: 3px;
+}
+
+#articulo1 {
+    background-color: rgba(0, 155, 200, 0.5);
+    /* opacity: 0.9; Da opacidad a todo el contenedor */
+}
+
+#articulo2 {
+    /* opacity: 0.9; Da opacidad a todo el contenedor */
+    background-image: url("imagenes/cat.webp") ;
+    /* height: 400px; */
+    /* El background-size de cover es un tamaño dinámico que se autoajusta al tamaño de la pantalla */
+    background-size: cover; 
+    background-repeat: repeat-y;
+    background-position: center;
+
+    /*Hacerlo de una manera mas simple*/
+    background: red, url("imagenes/cat.webp"), repeat-y, center;
+}
