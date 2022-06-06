@@ -5,12 +5,34 @@
     font-family: 'HK Grotesk Light', sans-serif;
 }
 
+body {
+    display: grid;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    grid-template-areas: 
+        "navg espacio"
+        "header espacio"
+        "contenido aside"
+        "footr footr"
+    ;
+}
+header {
+    grid-area: header;
+}
+#contenido {
+    grid-area: contenido;
+}
+aside {
+    background-color: #6fff31;
+    grid-area: aside;
+}
 h1 {
     font-family: 'HK Grotesk Bold', sans-serif;
     font-size: 50;
 }
 
 #nav-bar {
+    grid-area: navg;
     width: 100%;
     height: 100px;
     display: flex;
@@ -19,10 +41,48 @@ h1 {
     padding:5px;
 }
 
-nav {
-    
+#tabla-estudios {
+    border-spacing: 0;
+    border: 2px solid white;
+    align-content: center;
+    width: 50%;
 }
 
-.nav-opt {
+td ,th {
+    border: 2px solid white;
+    text-align: center;
+}
 
+th {
+    background: #6fff31;
+    color: black;
+}
+
+#tb-h1 {
+    width: 25%;
+    text-align: left;
+}
+.tb-h2 {
+    width: 20%;
+}
+
+footer {
+    grid-area: footr;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    background: #000000;
+    background: -moz-linear-gradient(left, #000000 0%, #6FFF31 80%, #6FFF31 100%);
+    background: -webkit-linear-gradient(left, #000000 0%, #6FFF31 80%, #6FFF31 100%);
+    background: linear-gradient(to right, #000000 0%, #6FFF31 80%, #6FFF31 100%);
+}
+#footer-final {
+    width: 100%;
+}
+.bloque-pfooter {
+    margin: 2%;
+    width: 25%;
+    /*background: none;*/
 }
