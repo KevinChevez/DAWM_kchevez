@@ -1,0 +1,39 @@
+* , *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+    /* Styles */
+    body {
+        display: grid;
+        row-gap: 0.5rem;
+        column-gap: 0.5rem;
+        grid-template-areas: 
+            "navg navg"
+            "aside vacio"
+            "header header"
+            "contenido contenido"
+            "footr footr"
+        ;
+    }
+    header {
+        grid-area: header;
+    }
+    #contenido {
+        grid-area: contenido;
+    }
+    aside {
+        background-color: #6fff31;
+        grid-area: aside;
+    }
+    #nav-bar {
+        grid-area: navg;
+        width: 100%;
+        height: 100px;
+        display: flex;
+    }
+}
