@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+section, article {
+  border: 1px solid grey;
+  border-radius: 1%;
+  text-align: center
+}
+
+section {
+  background-color: lightgreen;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+}
+
+.half {
+  width: 49%;
+}
+
+.fila2 {
+  width: 32%;
+}
+
+/*
+Usar el formato siguiente es lo mismo que tener el formato:
+.bottom {
+  width: 100%
+}
+*/
+body :nth-child(8){
+  width: 100%;
+}

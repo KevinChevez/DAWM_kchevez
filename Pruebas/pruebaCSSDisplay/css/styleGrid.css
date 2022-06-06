@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+section, article {
+    border: 1px solid grey;
+    border-radius: 1%;
+    text-align: center
+}
+
+section {
+    background-color: lightgreen;
+}
+
+body {
+    display: grid;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    grid-template-areas: 
+    "fc11 fc11 fc11 fc12 fc12 fc12"
+    "fc21 fc21 fc22 fc22 fc23 fc23"
+    "fc31 fc31 fc31 fc32 fc32 fc32"
+    "fc41 fc41 fc41 fc41 fc41 fc41"
+    ;
+}/*formato: fc -> f = fila | c = columna*/
+
+#s1 {grid-area: fc11;}
+#s2 {grid-area: fc12;}
+#s3 {grid-area: fc21;}
+#s4 {grid-area: fc22;}
+#s5 {grid-area: fc23;}
+#s6 {grid-area: fc31;}
+#s7 {grid-area: fc32;}
+#s8 {grid-area: fc41;}
