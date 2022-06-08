@@ -7,35 +7,37 @@
     <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
     <title>Proyecto 1 - Kevin Chévez</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style2.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <nav>
-        <div id="nav-bar">
-            <div class="logo-myself">
-                Logo
-            </div>
-            <div class="nav-opt">
-                ¿Quién soy?
-            </div>
-            <div class="nav-opt">
-                Hobbies
-            </div>
-            <div class="nav-opt">
-                Estudios
-            </div>
-            <div class="nav-opt">
-                Pregúntame
-            </div>
+    <nav id="nav-bar">
+        <div class="logo-myself">
+            <img src="imagenes/Myself Logo.png" alt="Logo de Myself">
+        </div>
+        <div class="nav-opt">
+            ¿Quién soy?
+        </div>
+        <div class="nav-opt">
+            Hobbies
+        </div>
+        <div class="nav-opt">
+            Estudios
+        </div>
+        <div class="nav-opt">
+            Pregúntame
         </div>
     </nav>
 
     <header>
         <h1>Conoce un poco más sobre mí y quién quiero SER.</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/52e2lSy7mwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </header>
     <div id="contenido">
         <section >
-            <img src="" alt="">
+            <div class="container-fotos">
+                <img src="imagenes/miFoto.jpg" alt="Mi foto Kevin Chévez" id="mifoto">
+            </div>
             <article>
                 <h2>¿Quién soy?</h2>
                 <p>
@@ -54,7 +56,6 @@
             </article>
         </section>
         <section>
-            <img src="" alt="">
             <article>
                 <h2>Hobbies</h2>
                 <p>
@@ -80,9 +81,14 @@
                     <li>Filosofar</li>
                 </ol>
             </article>
+            <div class="container-fotos">
+                <img id="hobbie" src="imagenes/hobbies.png" alt="Imagen de Hobbies">
+            </div>
         </section>
         <section>
-            <img src="" alt="">
+            <div class="container-fotos">
+                <img src="imagenes/Estudios.png" alt="Imagen de estudios">
+            </div>
             <article>
                 <h2>Estudios</h2>
                 <p>
@@ -145,7 +151,6 @@
             </table>
         </section>
         <section>
-            <img src="" alt="">
             <article>
                 <h2>Pregúntame</h2>
                 <p>
@@ -153,18 +158,18 @@
                 </p>
                 <form action="POST">
                     <div>
-                        <img src="" alt="">
+                        <img src="imagenes/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt="png de cuenta">
                         <label for="txtfld-nombres">Nombres completos</label>
                         <input type="text" id="txtfld-nombres" name="nombres" placeholder="Ingrese sus nombres completos.">
                     </div>
                     <div>
-                        <img src="" alt="">
+                        <img src="imagenes/mail_FILL0_wght400_GRAD0_opsz48.png" alt="png de mail">
                         <label for="txtfld-correo">Correo Electrónico</label>
                         <input type="text" id="txtfld-correo" name="correo" placeholder="Ingrese su correo electrónico.">
                     </div>
                     <div>
-                        <img src="" alt="">
-                        <label for="txtfld-correo">Género</label>
+                        <img src="imagenes/transgender_FILL0_wght400_GRAD0_opsz48.png" alt="png de genero">
+                        <label for="slct-genero">Género</label>
                         <select name="genero" id="slct-genero">
                             <option value="masculino">Masculino</option>
                             <option value="femenino">Femenino</option>
@@ -172,7 +177,7 @@
                         </select>
                     </div>
                     <div>
-                        <img src="" alt="">
+                        <img src="imagenes/comment_FILL0_wght400_GRAD0_opsz48.png" alt="png de comentario">
                         <label for="comentarios">Comentarios</label>
                         <textarea rows="5" cols="30" id="comentario" name="coment" placeholder="Ingrese comentario"></textarea>
                     </div>
@@ -186,7 +191,11 @@
             </article>
         </section>
         <section>
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123 movies</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">html google map embed</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1968.6790492970904!2d-79.93226991085908!3d-2.212305602936435!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sec!4v1654619999981!5m2!1ses!2sec"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </section>
     </div>
     <aside>
@@ -219,7 +228,7 @@
             Blog <br>
         </div>
         <div class="bloque-pfooter">
-            <img src="" alt="">
+            <img src="imagenes/Myself Logo.png" alt="Logo Myself">
             <img src="" alt="">
             <img src="" alt="">
             <img src="" alt="">

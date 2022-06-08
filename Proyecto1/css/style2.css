@@ -10,30 +10,36 @@
     /* Styles */
     body {
         display: grid;
-        row-gap: 0.5rem;
-        column-gap: 0.5rem;
-        grid-template-areas: 
-            "navg navg"
-            "aside vacio"
-            "header header"
-            "contenido contenido"
-            "footr footr"
+        grid-template:
+            "navg       navg"       auto
+            "aside      vacio"      auto
+            "header     header"     auto
+            "contenido  contenido"  auto
+            "footr      footr"      auto/
+            auto         auto
         ;
-    }
-    header {
-        grid-area: header;
-    }
-    #contenido {
-        grid-area: contenido;
-    }
-    aside {
-        background-color: #6fff31;
-        grid-area: aside;
     }
     #nav-bar {
         grid-area: navg;
         width: 100%;
-        height: 100px;
-        display: flex;
+        font-size: 1.2ex;
+    }
+    aside {
+        /* background-color: #6fff31; */
+        grid-area: aside;
+    }
+    header {
+        grid-area: header;
+        width: 100%;
+    }
+    #contenido {
+        grid-area: contenido;
+    }
+    footer{
+        grid-area: footr;
+    }
+
+    h1 {
+        font-size: 4ex;
     }
 }
