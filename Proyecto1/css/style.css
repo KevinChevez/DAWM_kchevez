@@ -1,7 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css");
 * {
     color: white;
-    background-color: black;
+    /* background-color: black; */
     font-family: 'HK Grotesk Light', sans-serif;
 }
 
@@ -22,6 +22,13 @@ body {
         "footr      footr"      auto/
         auto         auto
     ;
+    background: 
+        url(../imagenes/BackgroundEspol.png) top left 65vh / 200vh no-repeat,
+        url(../imagenes/GreenBackground.png) top 1000px right 400px  /1600px no-repeat,
+        url(../imagenes/GreenBackground.png) bottom 10px left 400px /1600px no-repeat
+        black
+    ;
+    /* background-size: contain; */
 }
 #nav-bar {
     grid-area: navg;
@@ -51,10 +58,10 @@ footer {
     flex-wrap: wrap;
     row-gap: 0.5rem;
     column-gap: 0.5rem;
-    background: #000000;
-    background: -moz-linear-gradient(left, #000000 0%, #6FFF31 80%, #6FFF31 100%);
-    background: -webkit-linear-gradient(left, #000000 0%, #6FFF31 80%, #6FFF31 100%);
     background: linear-gradient(to right, #000000 0%, #6FFF31 80%, #6FFF31 100%);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
 }
 
 h1 {
@@ -65,41 +72,54 @@ h1 {
 .barra-form {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
     background-color: #6fff31;
     padding: 1%;
     margin: 1%;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 .icono {
-    width: 5%;
-    height: 5%;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    /* margin: 3.2px; */
     background: none;
 }
+
 label {
+    font-family: 'HK Grotesk Light', sans-serif;
     width: 20%;
     height: 90%;
     background:none;
     color: #000000;
-    border-radius: 5%;
+    border-radius: 10px;
 }
-input {
+.input-text {
     width: 70%;
     color: #6fff31;
-    border-radius: 5%;
+    border-radius: 10px;
+    padding: 5px;
 }
 select, textarea {
     width: 70%;
-    border-radius: 5%;
+    border-radius: 10px;
+    padding: 5px;
 }
 #botonEnviar {
-    width: 50%;
+    width: 24%;
     background-color: #6fff31;
+    text-align: center;
 }
 #chkbox {
-    width: 100%;
     background-color: #6fff31;
+    width: 72%;
+}
+button {
+    background: none;
+    border: none;
+    color: #000000;
 }
 
 .logo-myself {
@@ -135,14 +155,35 @@ th {
     width: 20%;
 }
 
+#sub-footer {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    height: 25%;
+    width: 100%;
+    
+}
 #footer-final {
-    /* width: 100%; */
+    width: 100%;
+    background: none;
+}
+#footer-final > *{
+    display: block;
+    text-align: center;
+}
 
+a, p {
+    background: none;
+}
+hr {
+    border-width: 2px;
+    border-color: white;
+    background: white;
 }
 .bloque-pfooter {
-    margin: 2%;
-    width: 25%;
-    /*background: none;*/
+    margin: 1.1%;
+    width: 22%;
+    background: none;
 }
 
 section {
@@ -165,5 +206,17 @@ article {
     border-radius: 50%;
 }
 form {
+    display: contents;
     width: 100%;
+}
+#chkbox, #botonEnviar {
+    padding: 1%;
+    margin: 1%;
+    border-radius: 10px;
+}
+
+#MapaBox {
+    width: 100%;
+    margin-top: 10%;
+    height: 350px;
 }
