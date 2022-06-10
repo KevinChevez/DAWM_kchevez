@@ -156,39 +156,39 @@
                 <p>
                     Para contactarte conmigo y preguntarme lo que desees, debes llenar los siguientes campos en el formulario:
                 </p>
-                <form action="POST">
-                    <div>
-                        <img src="imagenes/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt="png de cuenta">
-                        <label for="txtfld-nombres">Nombres completos</label>
-                        <input type="text" id="txtfld-nombres" name="nombres" placeholder="Ingrese sus nombres completos.">
-                    </div>
-                    <div>
-                        <img src="imagenes/mail_FILL0_wght400_GRAD0_opsz48.png" alt="png de mail">
-                        <label for="txtfld-correo">Correo Electrónico</label>
-                        <input type="text" id="txtfld-correo" name="correo" placeholder="Ingrese su correo electrónico.">
-                    </div>
-                    <div>
-                        <img src="imagenes/transgender_FILL0_wght400_GRAD0_opsz48.png" alt="png de genero">
-                        <label for="slct-genero">Género</label>
-                        <select name="genero" id="slct-genero">
-                            <option value="masculino">Masculino</option>
-                            <option value="femenino">Femenino</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                    <div>
-                        <img src="imagenes/comment_FILL0_wght400_GRAD0_opsz48.png" alt="png de comentario">
-                        <label for="comentarios">Comentarios</label>
-                        <textarea rows="5" cols="30" id="comentario" name="coment" placeholder="Ingrese comentario"></textarea>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="chkBot" id="chkbot"> No soy un robot <br>
-                    </div>
-                    <div>
-                        <button>Enviar</button>
-                    </div>
-                </form>
             </article>
+            <form action="POST">
+                <div class="barra-form">
+                    <img class="icono" src="imagenes/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt="png de cuenta">
+                    <label for="txtfld-nombres">Nombres completos</label>
+                    <input type="text" id="txtfld-nombres" name="nombres" placeholder="Ingrese sus nombres completos.">
+                </div>
+                <div class="barra-form">
+                    <img class="icono" src="imagenes/mail_FILL0_wght400_GRAD0_opsz48.png" alt="png de mail">
+                    <label for="txtfld-correo">Correo Electrónico</label>
+                    <input type="text" id="txtfld-correo" name="correo" placeholder="Ingrese su correo electrónico.">
+                </div>
+                <div class="barra-form">
+                    <img class="icono" src="imagenes/transgender_FILL0_wght400_GRAD0_opsz48.png" alt="png de genero">
+                    <label for="slct-genero">Género</label>
+                    <select name="genero" id="slct-genero">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="barra-form">
+                    <img class="icono" src="imagenes/comment_FILL0_wght400_GRAD0_opsz48.png" alt="png de comentario">
+                    <label for="comentarios">Comentarios</label>
+                    <textarea rows="5" cols="30" id="comentario" name="coment" placeholder="Ingrese comentario"></textarea>
+                </div>
+                <div id="chkbox">
+                    <input id="" type="checkbox" name="chkBot" id="chkbot"> No soy un robot <br>
+                </div>
+                <div id="botonEnviar">
+                    <button>Enviar</button>
+                </div>
+            </form>
         </section>
         <section>
             <iframe

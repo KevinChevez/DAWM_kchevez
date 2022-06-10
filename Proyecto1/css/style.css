@@ -61,9 +61,46 @@ h1 {
     font-family: 'HK Grotesk Bold', sans-serif;
     font-size: 6.5ex;
 }
-/* p {
-    font-size: 1.5ex;
-} */
+
+.barra-form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #6fff31;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5%;
+}
+.icono {
+    width: 5%;
+    height: 5%;
+    background: none;
+}
+label {
+    width: 20%;
+    height: 90%;
+    background:none;
+    color: #000000;
+    border-radius: 5%;
+}
+input {
+    width: 70%;
+    color: #6fff31;
+    border-radius: 5%;
+}
+select, textarea {
+    width: 70%;
+    border-radius: 5%;
+}
+#botonEnviar {
+    width: 50%;
+    background-color: #6fff31;
+}
+#chkbox {
+    width: 100%;
+    background-color: #6fff31;
+}
 
 .logo-myself {
     width: 30%;
@@ -119,10 +156,14 @@ section {
 }
 article {
     width: 60%;
+    padding: 1.2%;
 }
 #mifoto {
     border-radius: 50%;
 }
 #hobbie {
     border-radius: 50%;
+}
+form {
+    width: 100%;
 }
