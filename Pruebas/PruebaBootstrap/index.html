@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row mt-1">
+            <div class="p-1 col-12">
+                <div class="caja verde">
+                    <h2 class="display-4">Sección Top</h2>
+                </div>
+            </div>
+            <div class="p-1 col-md-3 col-sm-3 col-xs-12">
+                <div class="caja roja h-100 mx-auto ">
+                    <h2 class="display-4">Sección Aside</h2>
+                </div>
+            </div>
+            <div class="p-1 col-md-9 col-sm-9 col-xs-12">
+                <!-- Parte del contenido general -->
+                <div class="row">
+                    <div class="py-1 col-12">
+                        <div class="caja morado">
+                            <h2 class="display-4">Sección de Título</h2>
+                        </div>
+                    </div>
+                    <div class="py-1 col-md-6 col-sm-12">
+                        <div class="caja naranja">
+                            <h2 class="display-4">Sección de contenido 2ble columna</h2>
+                            <form action="POST">
+                                <div class="mb-3">
+                                    <label class="form-label" for="txtfld-nombres">Nombres completos</label>
+                                    <input class="form-control" type="text" id="txtfld-nombres" name="nombres" placeholder="Ingrese sus nombres completos.">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="txtfld-correo">Correo Electrónico</label>
+                                    <input class="form-control" type="text" id="txtfld-correo" name="correo" placeholder="Ingrese su correo electrónico.">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="slct-genero">Género</label>
+                                    <select class="form-select" aria-label="Default select example" name="genero" id="slct-genero">
+                                        <option selected>Seleccione el tipo</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="femenino">Femenino</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="comentarios">Comentarios</label>
+                                    <textarea class="form-text" rows="5" cols="30" id="comentario" name="coment" placeholder="Ingrese comentario"></textarea>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" id="chkbot" type="checkbox" name="chkBot"> 
+                                    <label class="form-check-label" for="chkbot">No soy un robot</label>
+                                </div>
+                                <div id="botonEnviar">
+                                    <button type="button">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="py-1 col-md-6 col-sm-12">
+                        <div class="caja naranja">
+                            <h2 class="display-4">Sección de contenido 2ble columna</h2>
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th id="tb-h1">Conocimientos Softwares y lenguajes de Programación</th>
+                                        <th class="tb-h2">Básico</th>
+                                        <th class="tb-h2">Medio</th>
+                                        <th class="tb-h2">Avanzado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr> <td>Microsoft Word </td><td> </td><td> </td><td>X</td>     </tr>
+                                    <tr> <td>Microsoft Excel</td><td> </td><td> </td><td>X</td>     </tr>
+                                    <tr> <td>Microsoft PowerPoint</td><td> </td><td>X</td><td> </td></tr>
+                                    <tr> <td>Google Drive</td><td> </td><td>X</td><td> </td>        </tr>
+                                    <tr> <td>Microsoft Office</td><td> </td><td> </td><td>X</td>    </tr>
+                                    <tr> <td>Adobe</td><td> </td><td>X</td><td> </td>               </tr>
+                                    <tr> <td>Java</td><td> </td><td> </td><td>X</td>                </tr>
+                                    <tr> <td>C++ y C</td><td> </td><td> </td><td>X</td>             </tr>
+                                    <tr> <td>Pytdon</td><td> </td><td>X</td><td> </td>              </tr>
+                                    <tr> <td>MySQL</td><td> </td><td>X</td><td> </td>               </tr>
+                                    <tr> <td>Git</td><td> </td><td> </td><td>X</td>                 </tr>
+                                    <tr> <td>PHP</td><td> </td><td>X</td><td> </td>                 </tr>
+                                    <tr> <td>Linux</td><td> </td><td>X</td><td> </td>               </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                    <div class="py-1 col-12">
+                        <!-- Sección de Gatos -->
+                        <div class="row row-cols-md-5 row-cols-sm-3 row-cols-2">
+                            <div class="col">
+                                <div class="caja azul">
+                                    <img src="cat.webp" class="img-fluid" alt="Se vende gato">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="caja azul">
+                                    <img src="cat.webp" class="img-fluid" alt="Se vende gato">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="caja azul">
+                                    <img src="cat.webp" class="img-fluid" alt="Se vende gato">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="caja azul">
+                                    <img src="cat.webp" class="img-fluid" alt="Se vende gato">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="caja azul">
+                                    <img src="cat.webp" class="img-fluid" alt="Se vende gato">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sección de Gatos -->
+                    </div>
+                </div>
+                <!-- Parte del contenido general -->
+            </div>
+            <div class="p-1 col-12">
+                <div class="caja verde">
+                    <h2 class="display-4">Seccion bottom</h2>
+                </div>
+            </div>  
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

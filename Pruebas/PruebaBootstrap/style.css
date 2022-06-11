@@ -1,0 +1,41 @@
+:root{
+    --color-rojo:#ff0000;
+    --color-azul:#0000ff;
+    --color-verde:#00ff00;
+    --color-gris:#bababa;
+    --color-morado:#ff00ff;
+    --color-naranja:#ff8b1f;
+}
+
+.roja{
+    background-color: var(--color-rojo);
+}
+
+.verde{
+    background-color: var(--color-verde);
+}
+
+.azul{
+    background-color: var(--color-azul);
+    margin-top: 5px;
+}
+
+.gris{ 
+    background-color: var(--color-gris);
+}
+
+.naranja{
+    background-color: var(--color-naranja);
+    /* height: 200px;  */
+}
+
+.morado{
+    background-color: var(--color-morado);
+    /* height: 100px; */
+}
+
+
+
+.caja{
+    border: 3px solid red;
+}
