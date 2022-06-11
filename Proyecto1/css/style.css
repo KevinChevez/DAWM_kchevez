@@ -1,7 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css");
 * {
     color: white;
-    /* background-color: black; */
     font-family: 'HK Grotesk Light', sans-serif;
 }
 
@@ -16,19 +15,18 @@ body {
     row-gap: 0;
     column-gap: 4rem;
     grid-template:
-        "navg       .   "       auto
-        "header     .   "       auto
+        "navg       bges   "       auto
+        "header     bges   "       auto
         "contenido  aside"      auto
         "footr      footr"      auto/
-        auto         auto
+        auto         15%
     ;
     background: 
-        url(../imagenes/BackgroundEspol.png) top left 65vh / 200vh no-repeat,
+        url(../imagenes/BackgroundEspol.png) top left 25vw / 200vh no-repeat,
         url(../imagenes/GreenBackground.png) top 1000px right 400px  /1600px no-repeat,
         url(../imagenes/GreenBackground.png) bottom 10px left 400px /1600px no-repeat
         black
     ;
-    /* background-size: contain; */
 }
 #nav-bar {
     grid-area: navg;
@@ -36,6 +34,10 @@ body {
     align-items: center;
     width: 60%;
     margin: 5%;
+}
+#bloqVideo {
+    width: auto;
+    margin-top: 6%;
 }
 header {
     grid-area: header;
@@ -47,9 +49,25 @@ header {
     margin: 10%;
 }
 aside {
-
+    display: flex;
+    flex-wrap: wrap;
     background-color: #6fff31;
     grid-area: aside;
+}
+#bloque-ads1{
+    display: block;
+    margin: 5px;
+    padding: 6px;
+}
+#bloque-ads2{
+    display: block;
+    margin: 5px;
+    padding: 6px;
+}
+#bloque-ads3{
+    display: block;
+    margin: 5px;
+    padding: 6px;
 }
 footer {
     grid-area: footr;
@@ -97,12 +115,14 @@ label {
     border-radius: 10px;
 }
 .input-text {
+    background-color: #000000;
     width: 70%;
     color: #6fff31;
     border-radius: 10px;
     padding: 5px;
 }
 select, textarea {
+    background-color: #000000;
     width: 70%;
     border-radius: 10px;
     padding: 5px;
@@ -220,3 +240,17 @@ form {
     margin-top: 10%;
     height: 350px;
 }
+
+audio::-webkit-media-controls-panel {
+    background-color: #6fff31;
+}
+
+
+/* .barra-song {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #6fff31;
+} */

@@ -6,7 +6,7 @@
     }
 
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 340px) {
     /* Styles */
     body {
         display: grid;
@@ -18,6 +18,12 @@
             "footr      footr"      auto/
             auto         auto
         ;
+        background: 
+        url(../imagenes/BackgroundEspol.png) top left 25vw / 200vw no-repeat,
+        url(../imagenes/GreenBackground.png) top 800px left  /1600px no-repeat,
+        url(../imagenes/GreenBackground.png) bottom 10px right -300px /1600px no-repeat
+        black
+    ;
     }
     #nav-bar {
         grid-area: navg;
@@ -25,7 +31,6 @@
         font-size: 1.2ex;
     }
     aside {
-        /* background-color: #6fff31; */
         grid-area: aside;
     }
     header {
@@ -41,5 +46,23 @@
 
     h1 {
         font-size: 4ex;
+    }
+
+    aside {
+        display: flex;
+        background-color: #6fff31;
+        grid-area: aside;
+        border-radius: 20px;
+    }
+    #bloque-ads1{
+        display: none;
+    }
+    #bloque-ads2{
+        text-align: center;
+        margin: 5px;
+        padding: 6px;
+    }
+    #bloque-ads3{
+        display: none;
     }
 }

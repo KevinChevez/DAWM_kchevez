@@ -16,29 +16,45 @@
             <img src="imagenes/Myself Logo.png" alt="Logo de Myself">
         </div>
         <div class="nav-opt">
-            ¿Quién soy?
+            <a href="#quiensoy">
+                ¿Quién soy?
+            </a>
         </div>
         <div class="nav-opt">
-            Hobbies
+            <a href="#hobbies">
+                Hobbies
+            </a>
         </div>
         <div class="nav-opt">
-            Estudios
+            <a href="#estudios">
+                Estudios
+            </a>
         </div>
         <div class="nav-opt">
-            Pregúntame
+            <a href="#preguntame">
+                Pregúntame
+            </a>
         </div>
+        
     </nav>
 
     <header>
         <h1>Conoce un poco más sobre mí y quién quiero SER.</h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/52e2lSy7mwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="barra-song">
+            <audio controls="yes">
+                <source src="recursos/Post Malone & Quavo - Congratulations.mp3" type="audio/mp3">
+              </audio>
+        </div>
+        <div id="bloqVideo">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/52e2lSy7mwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </header>
     <div id="contenido">
         <section >
             <div class="container-fotos">
                 <img src="imagenes/miFoto.jpg" alt="Mi foto Kevin Chévez" id="mifoto">
             </div>
-            <article>
+            <article id="quiensoy">
                 <h2>¿Quién soy?</h2>
                 <p>
                     Mi nombre es Kevin Isaac Chévez coronel, nací en Ecuador - Guayaquil el 24 de Febrero del
@@ -56,7 +72,7 @@
             </article>
         </section>
         <section>
-            <article>
+            <article id="hobbies">
                 <h2>Hobbies</h2>
                 <p>
                     En mis pasatiempos me gusta realizar la siguientes actividades:
@@ -89,7 +105,7 @@
             <div class="container-fotos">
                 <img src="imagenes/Estudios.png" alt="Imagen de estudios">
             </div>
-            <article>
+            <article id="estudios">
                 <h2>Estudios</h2>
                 <p>
                     Inicialmente comencé mis estudios en el pre kinder brindado por el CAMI de la ciudad (ubicación).
@@ -151,7 +167,7 @@
             </table>
         </section>
         <section>
-            <article>
+            <article id="preguntame">
                 <h2>Pregúntame</h2>
                 <p>
                     Para contactarte conmigo y preguntarme lo que desees, debes llenar los siguientes campos en el formulario:
@@ -201,8 +217,15 @@
         </section>
     </div>
     <aside>
-        <h2>Parte publicitaria</h2>
-        <img src="imagenes/cat.webp" alt="Un hermoso gato negro" style="widtd:96px;height:66.2px;">
+        <div id="bloque-ads1">
+            <img src="imagenes/TuentiPub.png" alt="Publicidad de Tuenti">
+        </div>
+        <div id="bloque-ads2">
+            <img src="imagenes/BasketPub2.png" alt="Publicidad de Basket">
+        </div>
+        <div id="bloque-ads3">
+            <img src="imagenes/TuentiPub3.png" alt="Publicidad de Tuenti">
+        </div>
     </aside>
     <footer>
         <div class="bloque-pfooter">
@@ -232,10 +255,18 @@
         <div class="bloque-pfooter">
             <img src="imagenes/Myself Logo.png" alt="Logo Myself">
             <div id="sub-footer">
-                <img class="icono" src="imagenes/facebook.svg" alt="Logo de facebook">
-                <img class="icono" src="imagenes/linkedin.svg" alt="Logo de Linkedin">
-                <img class="icono" src="imagenes/instagram.png" alt="Instagram iconos creados por Hight Quality Icons - Flaticon" href="https://www.flaticon.es/iconos-gratis/instagram" title="Icono obtenido de flaticon.es">
-                <img class="icono" src="imagenes/twitter.svg" alt="Logo de Twitter">
+                <a href="https://www.facebook.com/kevinisaac.chevezcoronel/">
+                    <img class="icono" src="imagenes/facebook.svg" alt="Logo de facebook">
+                </a>
+                <a href="https://www.linkedin.com/in/kevin-isaac-chevez-coronel-39a9a0214/">
+                    <img class="icono" src="imagenes/linkedin.svg" alt="Logo de Linkedin">
+                </a>
+                <a href="https://www.flaticon.es/iconos-gratis/instagram" target="_blank">
+                    <img class="icono" src="imagenes/instagram.png" alt="Instagram iconos creados por Hight Quality Icons - Flaticon" title="Icono obtenido de flaticon.es">
+                </a>
+                <a href="https://mobile.twitter.com/kevinissac2000">
+                    <img class="icono" src="imagenes/twitter.svg" alt="Logo de Twitter">
+                </a>
             </div>
         </div>
         <div id="footer-final">
