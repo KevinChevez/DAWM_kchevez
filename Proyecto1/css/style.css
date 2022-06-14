@@ -9,6 +9,10 @@ img , video {
     height: auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     display: grid;
@@ -218,6 +222,7 @@ section {
 article {
     width: 60%;
     padding: 1.2%;
+    text-align: justify;
 }
 #mifoto {
     border-radius: 50%;
@@ -244,7 +249,6 @@ form {
 audio::-webkit-media-controls-panel {
     background-color: #6fff31;
 }
-
 
 /* .barra-song {
     display: flex;
