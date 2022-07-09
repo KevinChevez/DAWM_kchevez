@@ -1,0 +1,149 @@
+* {
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1, h2 {
+    font-weight: bold;
+    line-height: 1.5;
+}
+li {
+    padding: 5px 0;
+}
+
+#cuerpo {
+    padding: 35px 250px 0 200px;
+    margin: 0;
+}
+h1:hover, #tipos > p:hover {
+    color: #339900;
+}
+.subtimes {
+    display: grid;
+    grid-template:
+        "circ"  auto
+        "tit2"  auto/
+        auto
+    ;
+    align-items: center;
+    justify-content: center;
+}
+.circle {
+    grid-area: circ;
+    border-radius: 100%;
+    border: 2px solid;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+}
+.circle > p {
+    grid-area: tit2;
+    font-size: 25px;
+}
+
+#encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 75px;
+}
+#tipos {
+    text-align: right;
+    padding-bottom: 25px;
+}
+#contenedorTitulo {
+    width: fit-content;
+}
+
+#contenido {
+    display: grid;
+    grid-template:
+        "times times"  auto
+        "ingre  instruc" auto
+        "vegeta fusion"  auto/
+        1fr      1fr
+    ;
+    grid-gap: 20px;
+}
+#tiempos {
+    grid-area: times;
+    display: flex;
+    justify-content: space-around;
+}
+#ingredientes{
+    grid-area: ingre;
+
+}
+#instrucciones{
+    grid-area: instruc;
+}
+#vegetarian {
+    grid-area: vegeta;
+}
+#fusion{
+    grid-area: fusion;
+}
+
+.subcont {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+
+#vegetarian > .subcont, #fusion > .subcont  {
+    border: none;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 380px) {
+    /* Styles */
+    #cuerpo {
+        padding: 10px 5px 0 5px;
+        margin: 0;
+    }
+
+    #contenido {
+        display: grid;
+        grid-template:
+            "ingre" auto
+            "instru" auto
+            "vegeta"  auto
+            "fusion" auto/
+            1fr
+        ;
+    }
+    #tiempos {
+        display: none;
+    }
+    #encabezado {
+        grid-area: titulo;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+        padding-top: 20px;
+    }
+    #ingredientes{
+        grid-area: ingre;
+    }
+    #instrucciones{
+        grid-area: instru;
+    }
+    #vegetarian {
+        grid-area: vegeta;
+    }
+    #fusion{
+        grid-area: fusion;
+    }
+    #contenedorTitulo {
+        width: 100%;
+        text-align: center;
+    }
+    #tipos {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

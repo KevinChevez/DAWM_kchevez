@@ -1,0 +1,106 @@
+/* Nombre: Chevez Coronel Kevin Isaac */
+/*
+  Desde Google Fonts, importe las fuentes "Poppins". Específicamente el Thin 100, Extra-light 200 y Regular 400. 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
+
+
+/*
+  Utilice el selector para la etiqueta body
+  
+    Familia de fuentes: 'Poppins', sans-serif
+*/
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/*
+  Utilice el selector para la clase "inner-product"
+
+    Radio del borde: 5px
+    Relleno de caja: 30px
+    Color de fondo: white
+*/
+.inner-product {
+  border-radius: 5px;
+  padding: 30px;
+  background-color: white;
+}
+
+
+/*
+  Utilice el selector para el identificador "list"
+
+    Muestre los elementos mediante "grid"
+    Utilice una plantilla de 4 columnas
+    Los elementos se auto justifican en el centro de la rejilla
+*/
+#list {
+  display: grid;
+  grid-template:
+    "c1 c2 c3 c4"  auto/
+    auto auto auto auto
+  ;
+  text-align: justify;
+}
+
+
+/*
+  Al pasar el mouse por encima de la siguiente estructura
+
+  <element class="product-list">
+    …
+    <element class="product">
+         …
+        <element class="product-title">
+            …
+            <a :hover>
+
+  Aplique la propiedad 
+
+    Color #45b77d
+*/
+.product-title > a:hover {
+  color: #45b77d !important;
+  /* background-color: #45b77d; */
+}
+
+
+/*
+  Utlice un selector avanzado para la etiqueta small 
+
+    Margen hacia arriba 0.5rem.
+*/
+small + p  {
+  margin-top: 0.5rem;
+  background-color:#45b77c24;
+}
+
+
+/*
+  Para dispositivos con ancho 300px: 
+
+  Utilice el selector para el identificador "list"
+
+    Muestre los elementos mediante "grid"
+    Utilice una plantilla de 1 columnas
+    Los elementos se auto justifican en el centro de la rejilla
+
+  Para las etiquetas div con clase "figure-image"
+
+    Desaparece su contenido
+*/
+@media only screen and (max-width: 300px) {
+  #list {
+    display: grid;
+    grid-template:
+      "c1"  auto
+    ;
+    text-align: justify;
+  }
+
+  div.figure-image{
+    display: none;
+  }
+}

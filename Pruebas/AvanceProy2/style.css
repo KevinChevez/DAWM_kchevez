@@ -1,0 +1,84 @@
+* {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+body {
+    display: grid;
+    grid-template: 
+    "topp    topp"  1fr
+    "sect1  sect2"  2fr
+    "sect3  sect3"  3fr/
+    1fr    2fr
+    ;
+}
+
+.encabezado {
+    grid-area: topp;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.072);
+}
+.encabezado__titulo {
+    font-size: 1.2rem;
+    text-align: center;
+}
+.encabezado__info {
+    background-color: rgba(172, 255, 47, 0.4);
+    display: flex;
+    justify-content: space-between;
+}
+.encabezado__texto {
+    font-size: 1rem;
+}
+
+.cuerpo {
+    grid-area: sect1;
+    background-color: rgba(0, 0, 0, 0.072);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cuerpo--dos {
+    grid-area: sect2;
+}
+.cuerpo--tres {
+    grid-area: sect3;
+}
+.cuerpo__seccion {
+    background-color: rgba(172, 255, 47, 0.4);
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+.cuerpo__seccion--dos {
+    text-align: left;
+    height: 300px;
+}
+.cuerpo__seccion--oscuro {
+    background-color: black;
+    height: 95%;
+}
+.cuerpo__titulo {
+    font-size: 1.5rem;
+}
+.cuerpo__select {
+    width: 97%;
+}
+.cuerpo__link {
+    color: blueviolet;
+}
+.cuerpo__imagen {
+    width: 90%;
+}
+
+.container-lista {
+    width: auto;
+    height: 62%;
+    border: 5px solid black;
+}
+.container-lista__inner {
+    width: auto;
+    text-align: justify;
+    padding: 20px;
+}

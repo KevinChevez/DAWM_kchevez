@@ -1,0 +1,59 @@
+/*
+  Desde Google Fonts, importe las fuentes Open Sans y Open Sans Condensed. Específicamente de 300 y 700. 
+*/
+
+
+
+
+/*
+  Utilice el selector para la etiqueta body
+  
+  Familia de fuentes: Open Sans, Helvetica, sans-serif
+  Texto alineado: centro
+  Margen: 20px
+*/
+
+
+
+/*
+  Utilice el selector para la clase "card"
+
+  Radio del borde: 15px
+  Ancho: 300px
+*/
+
+
+
+/*
+  Utilice el selector para el identificador "cards"
+
+  Muestre los elementos mediante flexbox
+  Los elementos deben ajustarse en múltiples líneas, desde arriba hacia abajo
+  Justificados hacia el centro
+*/
+
+
+
+/*
+  Al pasar el mouse por encima de los elementos con la clase "card"
+
+  Orden en el eje Z: 5 
+  Agregue una sombra con los siguientes valores
+      spread-radius -15px 
+      offset-x 0px 
+      color #000000
+      blur-radius 30px
+      offset-y 13px
+  Reposiciona el elemento -10px verticalmente (translateY)
+*/
+
+
+
+/*
+  Utlice un selector avanzado para un div, 
+  cuyo atributo class termina por "image-container"
+
+  Relleno 1.1em. Excepto hacia relleno abajo cuyo valor es 0.
+*/
+
+
