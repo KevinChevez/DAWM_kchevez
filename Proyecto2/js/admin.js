@@ -1,18 +1,12 @@
+
+
 // Graph
 var ctx = document.getElementById("myChart");
 
 var myChart = new Chart(ctx, {
   type: "line",
   data: {
-    labels: [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
+    labels: ["Sunday","M","Tuesday","Wednesday","Thursday","Friday","Saturday"],
     datasets: [
       {
         data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
