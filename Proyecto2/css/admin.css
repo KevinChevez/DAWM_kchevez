@@ -22,6 +22,7 @@ body {
 @media (max-width: 991.98px) {
   .sidebar {
     width: 100%;
+    height: fit-content;
   }
 }
 .sidebar .active {

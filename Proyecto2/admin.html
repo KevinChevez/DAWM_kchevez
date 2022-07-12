@@ -36,23 +36,23 @@
             <i class="fas fa-tachometer-alt fa-fw me-3"></i>
             <span>Inicio</span>
           </a>
-          <a href="#GraficoGeneral" class="list-group-item list-group-item-action py-2 ripple" onclick="active">
+          <a href="#GraficoGeneral" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-chart-area fa-fw me-3"></i>
             <span>Dashboard general</span>
           </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="#SndCharts" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-chart-line fa-fw me-3"></i>
             <span>Preview de países</span>
           </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="#SndCharts" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-chart-pie fa-fw me-3"></i>
             <span>SEO</span>
           </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="#SndCharts" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-chart-bar fa-fw me-3"></i>
             <span>Orders</span>
           </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="#SndCharts" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-thumbtack fa-fw me-3"></i>
             <span>Recursos</span>
           </a>
@@ -142,11 +142,11 @@
     </div>
 
     <div class="container pt-4">
-      <!-- Section: Main chart -->
-      <section class="mb-4">
+      <!-- OPEN: Section: Main chart -->
+      <section id="GraficoGeneral" class="mb-4">
         <div class="card">
           <div class="card-header py-3">
-            <h5 id="GraficoGeneral" class="mb-0 text-center">
+            <h5 class="mb-0 text-center">
               <strong>Gráfico general</strong>
             </h5>
           </div>
@@ -156,13 +156,25 @@
             </canvas>
           </div>
 
+        </div>
+      </section>
+      <!-- CLOSE: Section: Main chart -->
+
+      <!-- OPEN: Section: Secondaries chart -->
+      <section id="SndCharts" class="mb-4">
+        <div class="card">
+          <div class="card-header py-3">
+            <h5 id="GraficosSecundarios" class="mb-0 text-center">
+              <strong>Gráficos secundarios</strong>
+            </h5>
+          </div>
           <div class="container-fluid">
             <div class="row my-5">
 
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-body">
                   <canvas class="my-4" id="myChart2" height="180">
-                    
+                    <!-- Grafico 2 -->
                   </canvas>
                 </div>
               </div>
@@ -170,7 +182,7 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-body">
                   <canvas class="my-4" id="myChart3" height="180">
-                    
+                    <!-- Grafico 3 -->
                   </canvas>
                 </div>
               </div>
@@ -178,17 +190,16 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-body">
                   <canvas class="my-4" id="myChart4" height="180">
-                    
+                    <!-- Grafico 4 -->
                   </canvas>
                 </div>
               </div>
 
             </div>
           </div>
-
         </div>
       </section>
-      <!-- Section: Main chart -->
+      <!-- CLOSE: Section: Secondaries chart -->
 
       <!--Section: Sales Performance KPIs-->
       <section class="mb-4">

@@ -1,4 +1,13 @@
 
+for (const listItem of document.getElementsByClassName("list-group-item-action")) {
+  listItem.addEventListener("click", clickEvent => {
+    document.getElementsByClassName("list-group-item list-group-item-action py-2 ripple active").forEach(element => {
+      element.className = "list-group-item list-group-item-action py-2 ripple";
+    });
+    listItem.className = "list-group-item list-group-item-action py-2 ripple active";
+  })
+}
+
 // Grafico 1 - Principal general
 let arrLabels = ["Sunday","M","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 let arrDatos = [15339, 21345, 18483, 24003, 23489, 24092, 12034];
