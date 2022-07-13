@@ -1,3 +1,4 @@
+const API = "https://covid19.mathdro.id/api";
 
 for (const listItem of document.getElementsByClassName("list-group-item-action")) {
   listItem.addEventListener("click", clickEvent => {
@@ -7,6 +8,29 @@ for (const listItem of document.getElementsByClassName("list-group-item-action")
     listItem.className = "list-group-item list-group-item-action py-2 ripple active";
   })
 }
+
+window.onload = function () {
+  fetch(API)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        let linkCountries = data.countries;
+        fetch(linkCountries)
+          .then(response2 => response2.json())
+          .then(dataCountries => {
+            console.log(dataCountries);
+            let countries = dataCountries.countries;
+            for (const country of countries) {
+              let plantillaOption = `<option value="${country.iso3}">${country.name}</option>`
+              document.querySelector('div.input-group > select').innerHTML += plantillaOption;
+            }
+          })
+        ;
+
+    })
+  ;
+}
+
 
 // Grafico 1 - Principal general
 let arrLabels = ["Sunday","M","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -59,4 +83,17 @@ async function crearGrafico(id, tipo, arrEtiquetas, arrDatos){
       },
     },
   });
+}
+
+// Funcion para obtener el .json del API (data)
+async function getDataAPI (API){
+  fetch(API)
+    .then(response => response.json())
+    .then(data => {
+      return data;
+    })
+    .catch(error => {
+      return error;
+    })
+  ;
 }

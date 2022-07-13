@@ -42,3 +42,7 @@ body {
 .carousel-inner {
   max-height: 29rem;
 }
+
+[class^='imghvr-'], [class*=' imghvr-'] {
+  background-color: #00000000;
+}

@@ -15,6 +15,9 @@
   <!-- MDB -->
   <link rel="stylesheet" href="css/mdb.min.css" />
 
+  <!-- CDN - Libreria ImageHover style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
+
   <!-- Custom styles -->
   <link rel="stylesheet" href="css/admin.css" />
 
@@ -22,7 +25,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
     integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
     crossorigin="anonymous">
-  </script>
+    </script>
 </head>
 
 <body>
@@ -32,9 +35,14 @@
     <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
       <div class="position-sticky">
         <div class="list-group list-group-flush mx-3 mt-4">
-          <a href="#carouselInterval" class="list-group-item list-group-item-action py-2 ripple active" aria-current="true">
+          <a href="#carouselInterval" class="list-group-item list-group-item-action py-2 ripple active"
+            aria-current="true">
             <i class="fas fa-tachometer-alt fa-fw me-3"></i>
             <span>Inicio</span>
+          </a>
+          <a href="#SeleccionPaises" class="list-group-item list-group-item-action py-2 ripple">
+            <i class="fas fa-search fa-fw me-3"></i>
+            <span>Seleccion de países</span>
           </a>
           <a href="#GraficoGeneral" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-chart-area fa-fw me-3"></i>
@@ -44,13 +52,9 @@
             <i class="fas fa-chart-line fa-fw me-3"></i>
             <span>Preview de países</span>
           </a>
-          <a href="#SndCharts" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="#ImageSection" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-chart-pie fa-fw me-3"></i>
-            <span>SEO</span>
-          </a>
-          <a href="#SndCharts" class="list-group-item list-group-item-action py-2 ripple">
-            <i class="fas fa-chart-bar fa-fw me-3"></i>
-            <span>Orders</span>
+            <span>Grafico Resumen</span>
           </a>
           <a href="#SndCharts" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-thumbtack fa-fw me-3"></i>
@@ -119,29 +123,68 @@
   <!--Main layout-->
   <main style="margin-top: 58px">
 
-    <div id="carouselInterval" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="3000">
-          <img src="img/Covid19.png" class="d-block w-100" alt="Imagen Covid-19">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="img/StayHome.jpg" class="d-block w-100" alt="Imagen quédate en casa">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="img/covidAir.webp" class="d-block w-100" alt="Imagen Covid-19 en el aire">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselInterval" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselInterval" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
     <div class="container pt-4">
+      <!-- OPEN: Section of carousel -->
+      <section class="mb-4">
+        <div class="card">
+          <div id="carouselInterval" class="carousel slide card-body" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="3000">
+                <img src="img/Covid19.png" class="d-block w-100" alt="Imagen Covid-19">
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/StayHome.jpg" class="d-block w-100" alt="Imagen quédate en casa">
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/covidAir.webp" class="d-block w-100" alt="Imagen Covid-19 en el aire">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- CLOSE: Section of carousel -->
+      
+      <!-- OPEN: Section of selector -->
+      <section id="SeleccionPaises" class="mb-4">
+        <div class="card bg-primary">
+          <div class="card-header py-3">
+            <h5 class="mb-0 text-center">
+              <strong class="text-light">Búsqueda por paises</strong>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="col-lg-12 col-sm-12 col-md-12">
+              <form class="contact_form" action="">
+                <div class="row">
+                  <!-- OPEN: Input Selector -->
+                  <div class="col-sm-12 mt-2 mb-6">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <select id="selectBox" class="form-select">
+                          <option selected>Seleccione el país a mostrar más información</option>
+                          <!-- Inyectar más opciones de país -->
+  
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- CLOSE: Input Selector -->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--CLOSE: Section of selector -->
+
       <!-- OPEN: Section: Main chart -->
       <section id="GraficoGeneral" class="mb-4">
         <div class="card">
@@ -155,7 +198,6 @@
 
             </canvas>
           </div>
-
         </div>
       </section>
       <!-- CLOSE: Section: Main chart -->
@@ -201,101 +243,31 @@
       </section>
       <!-- CLOSE: Section: Secondaries chart -->
 
-      <!--Section: Sales Performance KPIs-->
-      <section class="mb-4">
+      <!-- OPEN: Section Image of API -->
+      <section id="ImageSection" class="mb-4">
         <div class="card">
-          <div class="card-header text-center py-3">
+          <div class="card-header py-3">
             <h5 class="mb-0 text-center">
-              <strong>Sales Performance KPIs</strong>
+              <strong>Imagen General</strong>
             </h5>
           </div>
           <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-hover text-nowrap">
-                <thead>
-                  <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Product Detail Views</th>
-                    <th scope="col">Unique Purchases</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Product Revenue</th>
-                    <th scope="col">Avg. Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">Value</th>
-                    <td>18,492</td>
-                    <td>228</td>
-                    <td>350</td>
-                    <td>$4,787.64</td>
-                    <td>$13.68</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Percentage change</th>
-                    <td>
-                      <span class="text-danger">
-                        <i class="fas fa-caret-down me-1"></i><span>-48.8%%</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="text-success">
-                        <i class="fas fa-caret-up me-1"></i><span>14.0%</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="text-success">
-                        <i class="fas fa-caret-up me-1"></i><span>46.4%</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="text-success">
-                        <i class="fas fa-caret-up me-1"></i><span>29.6%</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="text-danger">
-                        <i class="fas fa-caret-down me-1"></i><span>-11.5%</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Absolute change</th>
-                    <td>
-                      <span class="text-danger">
-                        <i class="fas fa-caret-down me-1"></i><span>-17,654</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="text-success">
-                        <i class="fas fa-caret-up me-1"></i><span>28</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="text-success">
-                        <i class="fas fa-caret-up me-1"></i><span>111</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="text-success">
-                        <i class="fas fa-caret-up me-1"></i><span>$1,092.72</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="text-danger">
-                        <i class="fas fa-caret-down me-1"></i><span>$-1.78</span>
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="my-4 w-100" id="ImagenAPIDiv" height="380">
+              <figure class="imghvr-hinge-right ih-delay-md">
+                <img src="img/Covid19.png">
+                <figcaption class="bg-primary">
+                  <h3 class="text-md-center w-100">OpenGraf - Resumen</h3>
+                  <p class="text-center w-100">Imágen obtenida del API y uso de librería de efectos imagehover</p>
+                </figcaption>
+                <a href="http://www.imagehover.io" target="_blank"></a>
+              </figure>
             </div>
           </div>
         </div>
       </section>
-      <!--Section: Sales Performance KPIs-->
+      <!-- CLOSE: Section Image of API -->
 
-      <!--Section: Minimal statistics cards-->
+      <!-- OPEN: Section Minimal statistics cards-->
       <section>
         <div class="row">
           <div class="col-xl-3 col-sm-6 col-12 mb-4">
@@ -508,9 +480,9 @@
           </div>
         </div>
       </section>
-      <!--Section: Minimal statistics cards-->
+      <!-- CLOSE: Section Minimal statistics cards-->
 
-      <!--Section: Statistics with subtitles-->
+      <!-- OPEN: Section  Statistics with subtitles-->
       <section>
         <div class="row">
           <div class="col-xl-6 col-md-12 mb-4">
@@ -597,8 +569,9 @@
           </div>
         </div>
       </section>
-      <!--Section: Statistics with subtitles-->
+      <!-- CLOSE: Section Statistics with subtitles-->
     </div>
+
   </main>
   <!--Main layout-->
 
@@ -610,9 +583,8 @@
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous">
-  </script>
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
 
 
 </body>
