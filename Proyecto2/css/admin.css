@@ -5,6 +5,17 @@ body {
   main {
     padding-left: 240px;
   }
+
+  #toggleButton {
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  #titleProy {
+    justify-content: left !important;
+    padding-left: 10px;
+  }  
 }
 
 /* Sidebar */
@@ -15,7 +26,7 @@ body {
   left: 0;
   padding: 58px 0 0; /* Height of navbar */
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-  width: 240px;
+  width: 250px;
   z-index: 600;
 }
 
@@ -45,4 +56,15 @@ body {
 
 [class^='imghvr-'], [class*=' imghvr-'] {
   background-color: #00000000;
+}
+
+@media (max-width:768px) {
+  #titleProy {
+    font-size: 1rem !important;
+  }
+  #titleCont, .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+  
 }

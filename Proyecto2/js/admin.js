@@ -35,25 +35,25 @@ window.onload = function () {
 // Grafico 1 - Principal general
 let arrLabels = ["Sunday","M","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 let arrDatos = [15339, 21345, 18483, 24003, 23489, 24092, 12034];
-crearGrafico("myChart", "line", arrLabels, arrDatos);
+crearGrafico("myChart", "line", arrLabels, arrDatos, "transparent", "#007bff");
 
 // Grafico 2 - Secundario
 arrLabels = ["Sabado","M","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 arrDatos = [15339, 21345, 18483, 24003, 23489, 24092, 12034];
-crearGrafico("myChart2", "bar", arrLabels, arrDatos);
+crearGrafico("myChart2", "bar", arrLabels, arrDatos, "transparent", "#007bff");
 
 // Grafico 3 - Secundario
 arrLabels = ["Sabado","M","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 arrDatos = [15339, 21345, 18483, 24003, 23489, 24092, 12034];
-crearGrafico("myChart3", "line", arrLabels, arrDatos);
+crearGrafico("myChart3", "line", arrLabels, arrDatos, "transparent", "#007bff");
 
 // Grafico 4 - Secundario
 arrLabels = ["Sabado","M","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 arrDatos = [15339, 21345, 18483, 24003, 23489, 24092, 12034];
-crearGrafico("myChart4", "bar", arrLabels, arrDatos);
+crearGrafico("myChart4", "bar", arrLabels, arrDatos, "transparent", "#007bff");
 
 // funcion de graficos
-async function crearGrafico(id, tipo, arrEtiquetas, arrDatos){
+async function crearGrafico(id, tipo, arrEtiquetas, arrDatos, bgColor, bdColor){
   var ctx = document.getElementById(id);
   var myChart4 = new Chart(ctx, {
     type: tipo,
@@ -63,8 +63,8 @@ async function crearGrafico(id, tipo, arrEtiquetas, arrDatos){
         {
           data: arrDatos,
           lineTension: 0,
-          backgroundColor: "transparent",
-          borderColor: "#007bff",
+          backgroundColor: bgColor,
+          borderColor: bdColor,
           borderWidth: 4,
           pointBackgroundColor: "#007bff",
         },

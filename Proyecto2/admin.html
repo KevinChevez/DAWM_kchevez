@@ -56,7 +56,7 @@
             <i class="fas fa-chart-pie fa-fw me-3"></i>
             <span>Grafico Resumen</span>
           </a>
-          <a href="#SndCharts" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="#RecursoUsados" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-thumbtack fa-fw me-3"></i>
             <span>Recursos</span>
           </a>
@@ -67,54 +67,67 @@
 
     <!-- Navbar -->
     <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+
       <!-- Container wrapper -->
       <div class="container-fluid">
-        <!-- Toggle button -->
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
-          aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
+        <div class="row w-100 m-0">
 
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">
-          <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="25" alt="" loading="lazy" />
-        </a>
-        <!-- Selection box -->
-        <form class="d-none d-md-flex input-group w-auto my-auto">
-          <input autocomplete="off" type="search" class="form-control rounded"
-            placeholder="Search (ctrl + '/' to focus)" style="min-width: 225px" />
-          <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
-        </form>
+          <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 align-self-center"  id="toggleButton">
+            <!-- Toggle button -->
+            <button class="navbar-toggler pt-1 pb-0 px-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+              aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
 
-        <!-- Right links -->
-        <ul class="navbar-nav ms-auto d-flex flex-row">
-          <!-- Icon -->
-          <li class="nav-item">
-            <a class="nav-link me-3 me-lg-0" href="https://www.facebook.com/kevinisaac.chevezcoronel" target="_blank">
-              <i class="fab fa-facebook"></i>
+          <div class="col-xl-1 col-lg-1 col-md-2 col-sm-2 col-3 align-self-center">
+            <!-- Brand -->
+            <a class="navbar-brand m-0" href="#">
+              <img class="m-0" src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="25" alt=""
+                loading="lazy" />
             </a>
-          </li>
-          <!-- Icon -->
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="https://github.com/KevinChevez/DAWM_kchevez/tree/main/Proyecto2" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-          <!-- Avatar -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
-              id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-              <img src="img/MyPhotoKevin.jpg" class="rounded-circle" height="22" alt="" loading="lazy" />
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Chevez Coronel</a></li>
-              <li><a class="dropdown-item" href="#">Kevin Isaac</a></li>
-              <li><a class="dropdown-item" href="#">Paralelo 1</a></li>
+          </div>
+
+          <div class="col-xl-9 col-lg-9 col-md-6 justify-content-md-center col-sm-6 col-4 align-self-center" id="titleCont">
+            <!-- Section of title project -->
+            <h2 class="fs-5 m-0 text-primary d-flex justify-content-center" id="titleProy">Proyecto 2 - DAWM - Kevin Chevez</h2>
+          </div>
+
+          <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-4 justify-content-end align-self-center">
+            <!-- Right links -->
+            <ul class="navbar-nav ms-auto d-flex flex-row justify-content-end">
+              <!-- Icon -->
+              <li class="nav-item">
+                <a class="nav-link me-3 me-lg-0" href="https://www.facebook.com/kevinisaac.chevezcoronel" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <!-- Icon -->
+              <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" href="https://github.com/KevinChevez/DAWM_kchevez/tree/main/Proyecto2"
+                  target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <!-- Avatar -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                  id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  <img src="img/MyPhotoKevin.jpg" class="rounded-circle" height="22" alt="" loading="lazy" />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Chevez Coronel</a></li>
+                  <li><a class="dropdown-item" href="#">Kevin Isaac</a></li>
+                  <li><a class="dropdown-item" href="#">Paralelo 1</a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-        </ul>
+          </div>
+
+        </div>
       </div>
       <!-- Container wrapper -->
+
     </nav>
     <!-- Navbar -->
   </header>
@@ -151,7 +164,7 @@
         </div>
       </section>
       <!-- CLOSE: Section of carousel -->
-      
+
       <!-- OPEN: Section of selector -->
       <section id="SeleccionPaises" class="mb-4">
         <div class="card bg-primary">
@@ -169,9 +182,9 @@
                     <div class="form-group">
                       <div class="input-group">
                         <select id="selectBox" class="form-select">
-                          <option selected>Seleccione el país a mostrar más información</option>
+                          <option selected>Seleccione el país a mostrar más info.</option>
                           <!-- Inyectar más opciones de país -->
-  
+
                         </select>
                       </div>
                     </div>
@@ -194,7 +207,7 @@
             </h5>
           </div>
           <div class="card-body">
-            <canvas class="my-4 w-100" id="myChart" height="380">
+            <canvas class="my-4 w-100" id="myChart" height="250vh">
 
             </canvas>
           </div>
@@ -215,25 +228,28 @@
 
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-body">
-                  <canvas class="my-4" id="myChart2" height="180">
+                  <canvas class="my-4" id="myChart2" height="250vh">
                     <!-- Grafico 2 -->
                   </canvas>
+                  <h5 class="mb-0 text-center fs-6"> Gráfico de muertes</h5>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-body">
-                  <canvas class="my-4" id="myChart3" height="180">
+                  <canvas class="my-4" id="myChart3" height="250vh">
                     <!-- Grafico 3 -->
                   </canvas>
+                  <h5 class="mb-0 text-center fs-6"> Gráfico de recuperados</h5>
                 </div>
               </div>
 
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-body">
-                  <canvas class="my-4" id="myChart4" height="180">
+                  <canvas class="my-4" id="myChart4" height="250vh">
                     <!-- Grafico 4 -->
                   </canvas>
+                  <h5 class="mb-0 text-center fs-6"> Gráfico de vacunados</h5>
                 </div>
               </div>
 
@@ -255,9 +271,10 @@
             <div class="my-4 w-100" id="ImagenAPIDiv" height="380">
               <figure class="imghvr-hinge-right ih-delay-md">
                 <img src="img/Covid19.png">
-                <figcaption class="bg-primary">
-                  <h3 class="text-md-center w-100">OpenGraf - Resumen</h3>
-                  <p class="text-center w-100">Imágen obtenida del API y uso de librería de efectos imagehover</p>
+                <figcaption class="bg-primary d-flex flex-wrap align-content-center">
+                  <h3 class="w-100 d-flex justify-content-center align-self-center">OpenGraf - Resumen</h3>
+                  <p class="w-100 d-flex justify-content-center align-self-center">Imágen obtenida del API y uso de
+                    librería de efectos imagehover</p>
                 </figcaption>
                 <a href="http://www.imagehover.io" target="_blank"></a>
               </figure>
@@ -570,6 +587,91 @@
         </div>
       </section>
       <!-- CLOSE: Section Statistics with subtitles-->
+
+      <!-- OPEN: Section: Main chart -->
+      <section id="RecursoUsados" class="mb-4">
+        <div class="card">
+          <div class="card-header py-3">
+            <h5 class="mb-0 text-center">
+              <strong>Referencias de recursos usados</strong>
+            </h5>
+          </div>
+          <ol class="list-group list-group-numbered">
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold p-2">API - Covid-19</div>
+                <p class="p-2">
+                  Para la elaboración del proyecto se usó el API sobre datos estadísticos de
+                  la pandemia del COVID-19 ofrecido por mathdroid, la documentación del API
+                  puede ser revisado en el siguiente enlace.
+                </p>
+              </div>
+              <a href="https://github.com/mathdroid/covid-19-api" class="align-self-center" target="_blank">
+                <i class="fa fa-external-link-alt fa-2x align-self-center text-primary"></i>
+              </a>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold p-2">Librería - MDB</div>
+                <p class="p-2">
+                  Para la elaboración del proyecto se usó las herramientas necesarias ofrecidas
+                  por MDB, la documentación de la librería puede ser revisada en el siguiente
+                  enlace.
+                </p>
+              </div>
+              <a href="https://mdbootstrap.com/docs/standard/" class="align-self-center" target="_blank">
+                <i class="fa fa-external-link-alt fa-2x align-self-center text-primary"></i>
+              </a>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold p-2">Librería - Chart.js</div>
+                <p class="p-2">
+                  Para la elaboración de los gráficos del proyecto se usó las herramientas
+                  necesarias ofrecidas por Chart.js, la documentación de la librería puede
+                  ser revisada en el siguiente enlace.
+                </p>
+              </div>
+              <a href="https://www.chartjs.org/docs/latest/" class="align-self-center" target="_blank">
+                <i class="fa fa-external-link-alt fa-2x align-self-center text-primary"></i>
+              </a>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold p-2">Librería - ImageHover</div>
+                <p class="p-2">
+                  Para la elaboración del proyecto se usó la librería ofrecida por ImageHover
+                  para la transición dinámica de la imagen mostrada anteriormente, la
+                  documentación de la librería puede ser revisada en el siguiente enlace.
+                </p>
+              </div>
+              <a href="http://imagehover.io/docs" class="align-self-center" target="_blank">
+                <i class="fa fa-external-link-alt fa-2x align-self-center text-primary"></i>
+              </a>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold p-2">Librería - FontAwesome</div>
+                <p class="p-2">
+                  Para el uso de íconos en el proyecto se usó la librería ofrecida por Font
+                  Awesome para mejorar la calidad y uniformidad de los íconos usados, la
+                  documentación de la librería puede ser revisada en el siguiente enlace.
+                </p>
+              </div>
+              <a href="https://fontawesome.com/docs" class="align-self-center" target="_blank">
+                <i class="fa fa-external-link-alt fa-2x text-primary"></i>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <!-- CLOSE: Section: Main chart -->
+
     </div>
 
   </main>
