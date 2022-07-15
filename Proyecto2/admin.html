@@ -206,7 +206,7 @@
               <strong>Gráfico general</strong>
             </h5>
           </div>
-          <div class="card-body">
+          <div class="card-body" id="cardChart">
             <canvas class="my-4 w-100" id="myChart" height="250vh">
 
             </canvas>
@@ -226,28 +226,28 @@
           <div class="container-fluid">
             <div class="row my-5">
 
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card-body">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card-body border border-primary rounded-3 m-1" id="cardChart2">
                   <canvas class="my-4" id="myChart2" height="250vh">
-                    <!-- Grafico 2 -->
+                    <!-- Grafico 2 -->                                       
                   </canvas>
                   <h5 class="mb-0 text-center fs-6"> Gráfico de muertes</h5>
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card-body">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card-body border border-primary rounded-3 m-1" id="cardChart3">
                   <canvas class="my-4" id="myChart3" height="250vh">
-                    <!-- Grafico 3 -->
+                    <!-- Grafico 3 -->   
                   </canvas>
                   <h5 class="mb-0 text-center fs-6"> Gráfico de recuperados</h5>
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card-body">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card-body border border-primary rounded-3 m-1" id="cardChart4">
                   <canvas class="my-4" id="myChart4" height="250vh">
-                    <!-- Grafico 4 -->
+                    <!-- Grafico 4 -->                    
                   </canvas>
                   <h5 class="mb-0 text-center fs-6"> Gráfico de vacunados</h5>
                 </div>
@@ -270,7 +270,7 @@
           <div class="card-body">
             <div class="my-4 w-100" id="ImagenAPIDiv" height="380">
               <figure class="imghvr-hinge-right ih-delay-md">
-                <img src="img/Covid19.png">
+                <img id="imagenOG" src="">
                 <figcaption class="bg-primary d-flex flex-wrap align-content-center">
                   <h3 class="w-100 d-flex justify-content-center align-self-center">OpenGraf - Resumen</h3>
                   <p class="w-100 d-flex justify-content-center align-self-center">Imágen obtenida del API y uso de
