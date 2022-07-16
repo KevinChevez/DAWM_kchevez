@@ -311,19 +311,7 @@ function crearGrafico(subtitle, id, idChart, tipo, titulo, arrEtiquetas, arrDato
 
 }
 
-// Funcion para obtener el .json del API (data)
-async function getDataAPI(API) {
-  fetch(API)
-    .then(response => response.json())
-    .then(data => {
-      return data;
-    })
-    .catch(error => {
-      return error;
-    })
-    ;
-}
-
+// https://www.educative.io/answers/how-to-generate-a-random-color-in-javascript
 function generateRandomColor() {
   let maxVal = 0xFFFFFF; // 16777215
   let randomNumber = Math.random() * maxVal;
