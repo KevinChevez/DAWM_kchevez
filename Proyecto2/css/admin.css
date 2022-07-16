@@ -68,3 +68,9 @@ body {
   }
   
 }
+
+.size-flag {
+  max-height: 50px !important;
+  margin: 0;
+  padding: 0;
+}
