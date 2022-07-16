@@ -56,6 +56,10 @@
             <i class="fas fa-chart-pie fa-fw me-3"></i>
             <span>Grafico Resumen</span>
           </a>
+          <a href="#ResumenPaises" class="list-group-item list-group-item-action py-2 ripple">
+            <i class="fas fa-globe-americas fa-fw me-3"></i>
+            <span>Resumen de países</span>
+          </a>
           <a href="#RecursoUsados" class="list-group-item list-group-item-action py-2 ripple">
             <i class="fas fa-thumbtack fa-fw me-3"></i>
             <span>Recursos</span>
@@ -138,9 +142,9 @@
 
     <div class="container pt-4">
       <!-- OPEN: Section of carousel -->
-      <section class="mb-4">
+      <section>
         <div class="card">
-          <div id="carouselInterval" class="carousel slide card-body" data-bs-ride="carousel">
+          <div id="carouselInterval" class="carousel slide card-body pt-5" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="3000">
                 <img src="img/Covid19.png" class="d-block w-100" alt="Imagen Covid-19">
@@ -166,7 +170,7 @@
       <!-- CLOSE: Section of carousel -->
 
       <!-- OPEN: Section of selector -->
-      <section id="SeleccionPaises" class="mb-4">
+      <section id="SeleccionPaises" class="pt-5">
         <div class="card bg-primary">
           <div class="card-header py-3">
             <h5 class="mb-0 text-center">
@@ -199,7 +203,7 @@
       <!--CLOSE: Section of selector -->
 
       <!-- OPEN: Section: Main chart -->
-      <section id="GraficoGeneral" class="mb-4">
+      <section id="GraficoGeneral" class="pt-5">
         <div class="card">
           <div class="card-header py-3">
             <h5 class="mb-0 text-center">
@@ -207,16 +211,14 @@
             </h5>
           </div>
           <div class="card-body" id="cardChart">
-            <canvas class="my-4 w-100" id="myChart" height="250vh">
-
-            </canvas>
+            <!-- <canvas class="my-4 w-100" id="myChart" height="250vh"></canvas> -->
           </div>
         </div>
       </section>
       <!-- CLOSE: Section: Main chart -->
 
       <!-- OPEN: Section: Secondaries chart -->
-      <section id="SndCharts" class="mb-4">
+      <section id="SndCharts" class="pt-5">
         <div class="card">
           <div class="card-header py-3">
             <h5 id="GraficosSecundarios" class="mb-0 text-center">
@@ -228,28 +230,25 @@
 
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card-body border border-primary rounded-3 m-1" id="cardChart2">
-                  <canvas class="my-4" id="myChart2" height="250vh">
-                    <!-- Grafico 2 -->                                       
-                  </canvas>
-                  <h5 class="mb-0 text-center fs-6"> Gráfico de muertes</h5>
+                  <!-- <canvas class="my-4" id="myChart2" height="250vh">
+                  </canvas> -->
+                  <!-- <h5 class="mb-0 text-center fs-6"> Gráfico de muertes</h5> -->
                 </div>
               </div>
 
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card-body border border-primary rounded-3 m-1" id="cardChart3">
-                  <canvas class="my-4" id="myChart3" height="250vh">
-                    <!-- Grafico 3 -->   
-                  </canvas>
-                  <h5 class="mb-0 text-center fs-6"> Gráfico de recuperados</h5>
+                  <!-- <canvas class="my-4" id="myChart3" height="250vh">
+                  </canvas> -->
+                  <!-- <h5 class="mb-0 text-center fs-6"> Gráfico de recuperados</h5> -->
                 </div>
               </div>
 
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card-body border border-primary rounded-3 m-1" id="cardChart4">
-                  <canvas class="my-4" id="myChart4" height="250vh">
-                    <!-- Grafico 4 -->                    
-                  </canvas>
-                  <h5 class="mb-0 text-center fs-6"> Gráfico de confirmados</h5>
+                  <!-- <canvas class="my-4" id="myChart4" height="250vh">
+                  </canvas> -->
+                  <!-- <h5 class="mb-0 text-center fs-6"> Gráfico de confirmados</h5> -->
                 </div>
               </div>
 
@@ -260,7 +259,7 @@
       <!-- CLOSE: Section: Secondaries chart -->
 
       <!-- OPEN: Section Image of API -->
-      <section id="ImageSection" class="mb-4">
+      <section id="ImageSection" class="pt-5">
         <div class="card">
           <div class="card-header py-3">
             <h5 class="mb-0 text-center">
@@ -270,7 +269,7 @@
           <div class="card-body">
             <div class="my-4 w-100" id="ImagenAPIDiv" height="380">
               <figure class="imghvr-hinge-right ih-delay-md">
-                <img id="imagenOG" src="https://countryflagsapi.com/png/ECU">
+                <img id="imagenOG" src="img/imageNotAvailable.png" onerror="this.src='img/imageNotAvailable.png'">
                 <figcaption class="bg-primary d-flex flex-wrap align-content-center">
                   <h3 class="w-100 d-flex justify-content-center align-self-center">OpenGraf - Resumen</h3>
                   <p class="w-100 d-flex justify-content-center align-self-center">Imágen obtenida del API y uso de
@@ -285,13 +284,20 @@
       <!-- CLOSE: Section Image of API -->
 
       <!-- OPEN: Section Minimal statistics cards-->
-      <section id="paisesSection">
-        <!-- Inyectar contenido -->
+      <section id="ResumenPaises" class="pt-5">
+        <div class="card" id="paisesSection">
+          <div class="card-header py-3">
+            <h5 class="mb-0 text-center">
+              <strong>Resumen de los Paises</strong>
+            </h5>
+          </div>
+          <!-- Inyectar contenido -->
+        </div>
       </section>
       <!-- CLOSE: Section Minimal statistics cards-->
 
       <!-- OPEN: Section: Main chart -->
-      <section id="RecursoUsados" class="mb-4">
+      <section id="RecursoUsados" class="pt-5">
         <div class="card">
           <div class="card-header py-3">
             <h5 class="mb-0 text-center">
@@ -310,6 +316,21 @@
                 </p>
               </div>
               <a href="https://github.com/mathdroid/covid-19-api" class="align-self-center" target="_blank">
+                <i class="fa fa-external-link-alt fa-2x align-self-center text-primary"></i>
+              </a>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold p-2">API - Country Flags</div>
+                <p class="p-2">
+                  Para la elaboración del proyecto se usó el API de banderas del mundo 
+                  ofrecido por countryflagsapi.com, para obtener la imagen de la bandera
+                  del país en formato .png y presentarlas en el sitio web. La documentación
+                  del API puede ser revisado en el siguiente enlace.
+                </p>
+              </div>
+              <a href="https://countryflagsapi.com/" class="align-self-center" target="_blank">
                 <i class="fa fa-external-link-alt fa-2x align-self-center text-primary"></i>
               </a>
             </li>
