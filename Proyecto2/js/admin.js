@@ -1,7 +1,7 @@
 const API = "https://covid19.mathdro.id/api";
 const API_Muertes_Sorted = "https://covid19.mathdro.id/api/deaths";
 const mensajeNoChart =
-`<p class="text-danger justify-content-center align-self-center text-center">
+  `<p class="text-danger justify-content-center align-self-center text-center">
 Grafico no ha podido ser añadido debido a que no se ha encontrado datos de ciudades, estados o países.
 </p>`;
 
@@ -156,7 +156,7 @@ window.onload = function () {
 
 // Cuando se seleccione un pais
 document.querySelector('div.input-group > select').addEventListener('change', (eventSelect) => {
-  fetch(API+"/countries/"+eventSelect.target.value)
+  fetch(API + "/countries/" + eventSelect.target.value)
     .then(async response => await response.json())
     .then(data => {
       // Grafico 1 - Principal general
@@ -202,7 +202,7 @@ document.querySelector('div.input-group > select').addEventListener('change', (e
               }
               coloresBG.push(generateRandomColor());
               counter++;
-              if (counter >= 21) {
+              if (counter >= 11) {
                 break;
               }
             }
@@ -232,8 +232,8 @@ document.querySelector('div.input-group > select').addEventListener('change', (e
         .catch((error) => {
           console.log(error);
         })
-      ;
-      fetch(API+"/countries/"+eventSelect.target.value+"/og")
+        ;
+      fetch(API + "/countries/" + eventSelect.target.value + "/og")
         .then(response => response.url)
         .then(dataLink => {
           document.getElementById("imagenOG").src = dataLink;
@@ -241,27 +241,27 @@ document.querySelector('div.input-group > select').addEventListener('change', (e
         .catch((error) => {
           console.log(error);
         })
-      ;
+        ;
     })
     .catch((error) => {
       console.log(error);
     })
-  ;
+    ;
 })
 
 // funcion de graficos
 function crearGrafico(subtitle, id, idChart, tipo, titulo, arrEtiquetas, arrDatos, bgColor, bdColor) {
-  
+
   document.getElementById(id).innerHTML =
     `<canvas class="my-4 h-100" id="${idChart}"></canvas>
     <h5 class="mb-0 text-center fs-6">${subtitle}</h5>`
-  ;
-  
+    ;
+
   var ctx = document.getElementById(idChart);
   switch (tipo) {
     case "bar":
     case "line":
-      new Chart(ctx, {
+      let myChart = new Chart(ctx, {
         type: tipo,
         data: {
           labels: arrEtiquetas,
@@ -283,6 +283,18 @@ function crearGrafico(subtitle, id, idChart, tipo, titulo, arrEtiquetas, arrDato
             }
           }
         },
+        onResize: function (myChart, size) {
+          var showTicks = (size.height < 140) ? false : true;
+          myChart.options = {
+            scales: {
+              xAxes: [{
+                ticks: {
+                  display: showTicks
+                }
+              }]
+            }
+          };
+        }
       });
       break;
 
