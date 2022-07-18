@@ -1,4 +1,5 @@
 const API = "https://covid19.mathdro.id/api";
+// const API = "localhots:8000"
 const container = document.getElementsByClassName("container-lista")[0];
 const tab = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
 
