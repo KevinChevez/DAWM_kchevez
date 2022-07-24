@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabeceraComponent implements OnInit {
 
-  strAcerca:string = "Album fotográfico"
-  strInfo:string = "A través de mis ojos"
-  
+  strAcerca:string = "Uso de Angular Material Design"
+  strInfo:string = "By Kevin Isaac Chévez Coronel - DAWM - Paralelo #1"
+
   constructor() { }
 
   ngOnInit(): void {

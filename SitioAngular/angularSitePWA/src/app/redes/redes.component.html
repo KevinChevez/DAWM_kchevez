@@ -1,0 +1,8 @@
+<ul class="list-group list-group-horizontal justify-content-center mb-5">
+    <!-- *ngFor -->
+    <li class="list-group-item border-0" *ngFor="let red of redes">
+        <a [href]="red.href" target="_blank" class="text-primary">
+            <img width="25" [src]="red.src" alt="{{red.alt}}" onerror="this.src='assets/images/imageNotAvailable.png'">
+        </a>
+    </li>
+</ul>

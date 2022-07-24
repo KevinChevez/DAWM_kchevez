@@ -1,0 +1,71 @@
+<mat-card class="card text-center m-2">
+  <app-cabecera></app-cabecera>
+  <h2 class="card-text">{{titulo}}</h2>
+</mat-card>
+
+<mat-grid-list class="mt-3" [cols]="mybreakpoint" [rowHeight]="myrowheight" (window:resize)="handleSize($event)">
+  <mat-grid-tile>
+    <mat-card class="mx-2">
+      <mat-card-title-group>
+        <mat-card-title>Beautiful landscape</mat-card-title>
+        <mat-card-subtitle>Un paisaje hermoso entre las montañas</mat-card-subtitle>
+        <img mat-card-lg-image src="https://mdbootstrap.com/img/new/slides/041.webp" onerror="this.src='assets/images/imageNotAvailable.png'">
+      </mat-card-title-group>
+      <mat-card-content>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo possimus unde
+        sit temporibus blanditiis culpa natus eaque officia doloremque, eos at
+        mollitia tempore repellendus consequatur iusto recusandae vero est
+        voluptate?
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="mx-2">
+      <mat-card-title-group>
+        <mat-card-title>City architecture</mat-card-title>
+        <mat-card-subtitle>La majestuosa arquitectura de una ciudad desarrollada</mat-card-subtitle>
+        <img mat-card-lg-image src="https://mdbootstrap.com/img/new/fluid/city/055.webp" onerror="this.src='assets/images/imageNotAvailable.png'">
+      </mat-card-title-group>
+      <mat-card-content>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo possimus unde
+        sit temporibus blanditiis culpa natus eaque officia doloremque, eos at
+        mollitia tempore repellendus consequatur iusto recusandae vero est
+        voluptate?
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="mx-2">
+      <mat-card-title-group>
+        <mat-card-title>Shiba Inu v.1.0.0</mat-card-title>
+        <mat-card-subtitle>Primera versión cute de perrito Shiba</mat-card-subtitle>
+        <img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba1.jpg" onerror="this.src='assets/images/imageNotAvailable.png'">
+      </mat-card-title-group>
+      <mat-card-content>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo possimus unde
+        sit temporibus blanditiis culpa natus eaque officia doloremque, eos at
+        mollitia tempore repellendus consequatur iusto recusandae vero est
+        voluptate?
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="mx-2">
+      <mat-card-title-group>
+        <mat-card-title>Shiba Inu v.1.0.1</mat-card-title>
+        <mat-card-subtitle>Segunda versión cute de perrito Shiba</mat-card-subtitle>
+        <img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" onerror="this.src='assets/images/imageNotAvailable.png'">
+      </mat-card-title-group>
+      <mat-card-content>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo possimus unde
+        sit temporibus blanditiis culpa natus eaque officia doloremque, eos at
+        mollitia tempore repellendus consequatur iusto recusandae vero est
+        voluptate?
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+</mat-grid-list>
