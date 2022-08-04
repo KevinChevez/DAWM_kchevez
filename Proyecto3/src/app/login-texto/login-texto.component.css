@@ -1,0 +1,27 @@
+
+.carousel-caption-top {
+  padding-bottom: 0;
+  bottom: 77vh;
+  z-index: 100;
+  background-color:rgba(0, 0, 0, 0.500);
+  border-radius: 25px;
+}
+
+.carousel-caption-bottom {
+  bottom: 5vh;
+  z-index: 100;
+}
+
+.carousel-caption > h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.carousel-caption > h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+.carousel-caption > p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
