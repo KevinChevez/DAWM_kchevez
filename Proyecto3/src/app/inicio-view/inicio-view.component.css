@@ -1,0 +1,13 @@
+.carousel-inner {
+  height: 300px;
+}
+
+.mat-card {
+  height: auto;
+}
+
+.card-img {
+  height: 125px;
+  width: 125px;
+  object-fit: cover;
+}

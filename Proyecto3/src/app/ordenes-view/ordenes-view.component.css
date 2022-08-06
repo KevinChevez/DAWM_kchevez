@@ -1,0 +1,11 @@
+div {
+  margin: 0;
+  padding: 0;
+}
+.active,
+.selected,
+.mat-active,
+.mat-selected{
+  background-color: #ffc61a !important;
+  color: #322a28 !important;
+}

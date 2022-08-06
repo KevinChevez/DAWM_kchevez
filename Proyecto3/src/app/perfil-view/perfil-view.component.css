@@ -1,0 +1,44 @@
+.mat-icon {
+  width: 85px;
+  height: 85px;
+  font-size: 4rem;
+  border-radius: 100%;
+  text-align: center;
+  padding-top: 13px;
+}
+
+.bg_cafe{
+  background-color: var(--cafe-medio);
+}
+.my_bg_yellow {
+  background-color: #ffd964;
+  color: var(--cafe-principal);
+}
+.my_bg_rose_light {
+  background-color: var(--rosa-principal);
+  color: #ffffff;
+}
+.my_bg_rose {
+  background-color: var(--rosa-dark);
+  color: var(--rosa-light);
+}
+
+.imagen_perfil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  align-self: center;
+  background-size: cover;
+  width: 22vh;
+  height: 22vh;
+  border-radius: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  border: 10px solid var(--cafe-principal);
+  outline: 10px solid var(--cafe-medio);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

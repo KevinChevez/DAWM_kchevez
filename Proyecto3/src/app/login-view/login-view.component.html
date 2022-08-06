@@ -1,0 +1,34 @@
+<div
+  id="carruselLogin"
+  class="carousel slide carousel-fade"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <app-login-texto></app-login-texto>
+
+    <!-- Imagen inicio de sesion con NGFOR -->
+    <div *ngFor="let bg of fondos" class="carousel-item {{ bg.isActive }}">
+      <div
+        class="overlay-image"
+        style='background-image: url("{{ bg.source }}")'
+      ></div>
+    </div>
+    <!-- ------------------------- -->
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carruselLogin"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carruselLogin"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+</div>

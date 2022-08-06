@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --cafe-principal: #372a28;
+  --cafe-medio: #946c0a;
+  --amarillo-light: #ffd964;
+  --rosa-light: #fff4ea;
+  --rosa-principal: #f4cdc9;
+  --rosa-dark: #F33A6A;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.my_primary_color,
+.nav-link.active {
+  background-color: #ffc61a !important;
+  color: #322a28 !important;
+}
+
+.my_bg_dark,
+.mat-active,
+.mat-selected, body {
+  background-color: #372a28 !important;
+  color: #fff4ea !important;
+}
+.my_bg_light {
+  background-color: #fff4ea;
+  color: #372a28;
+}
+.my_bg_yellow,
+.mat-option {
+  background-color: #ffd964;
+  color: #372a28;
+}
+.mat-select-trigger {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.divider {
+  height: 1px;
+  background-color: #ffd964;
+  width: auto;
+}
