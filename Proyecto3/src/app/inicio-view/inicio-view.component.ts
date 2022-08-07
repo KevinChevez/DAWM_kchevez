@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioViewComponent implements OnInit {
 
-  productos:any[] = [
+  productos:any[] = [ 
     {
       "titulo": "Batidos",
       "subtitulo": "Algunos batidos",
