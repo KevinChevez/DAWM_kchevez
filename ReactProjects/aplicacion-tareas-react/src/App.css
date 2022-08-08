@@ -1,0 +1,32 @@
+html, body {
+  background-color: var(--bg-primary-color);
+  color: var(--text-primary-color);
+  font-family: Lato, sans-serif;
+  margin-top: 40px;
+}
+
+.container-aplicacion-tareas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tareas lista principal design */
+.tareas-list-main {
+  width: 600px;
+  min-height: 500px;
+  background-color: var(--bg-secundary-color);
+  color: var(--text-secundary-color);
+  padding: 25px;
+  margin: 10px;
+  border-radius: 26px;
+}
+
+h1 {
+  color: var(--bg-info-color);
+  font-size: 25px;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  margin: 20px 0;
+}

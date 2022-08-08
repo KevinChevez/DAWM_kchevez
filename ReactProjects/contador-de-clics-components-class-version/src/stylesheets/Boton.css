@@ -1,0 +1,28 @@
+button {
+  width: 250px;
+  height: 80px;
+  font-variant-numeric: Roboto, sans-serif;
+  font-size: 30px;
+  font-weight: Bold;
+  background-color: var(--bg-secundary-color);
+  color: var(--text-secundary-color);
+  border: 2px solid var(--text-primary-color);
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--bg-primary-color);
+  color: var(--text-primary-color);
+}
+
+.boton-click {
+  background-color: var(--bg-success-color);
+  color: var(--text-success-color);
+}
+
+.boton-reiniciar {
+  background-color: var(--bg-danger-color);
+  color: var(--text-danger-color);
+}

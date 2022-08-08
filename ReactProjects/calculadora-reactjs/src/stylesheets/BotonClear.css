@@ -1,0 +1,21 @@
+.btn-clear {
+  height: 80px;
+  font-size: 1.6em;
+  display: flex;
+  flex: 1;
+  background-color: var(--bg-danger-color);
+  color: var(--text-danger-color);
+  margin-top: 8px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 2px solid var(--text-danger-color);
+  cursor: pointer;
+  border-radius: 45px;
+}
+
+.btn-clear:hover {
+  background-color: var(--bg-warning-color);
+  color: var(--text-warning-color);
+  border: 2px solid var(--text-warning-color);
+}

@@ -1,0 +1,46 @@
+.contenedor-resenia {
+    width: 60vw;
+    height: 35vh;
+    margin: 10px 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 3px 13px 1px rgb(0 0 0 /9%);
+}
+
+.contenedor-imagen {
+    height: 100%;
+    width: 30%;
+}
+
+.imagen-resenia {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    object-position: top;   
+}
+
+.contenedor-texto-resenia {
+    width: 70%;
+    text-align: center;
+    padding: 40px;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.nombre-resenia {
+    font-size: 1.3rem;
+}
+
+.cargo-resenia {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    padding-bottom: 30px;
+}
+
+.text-resenia {
+    font-size: 1.1rem;
+    text-align: justify;
+}

@@ -1,0 +1,27 @@
+.btn-container {
+    height: 83px;
+    display: flex;
+    flex: 1 1;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 38px;
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    border-radius: 25px;
+    border: 2px solid var(--text-primary-color);
+    cursor: pointer;
+    user-select: none;
+    margin: 4px;
+}
+.btn-container:hover {
+    background-color: #5a01a7;
+}
+
+.operator {
+    background-color: var(--bg-secundary-color);
+    color: var(--text-secundary-color);
+}
+.operator:hover {
+    background-color: #0067fb;
+}
