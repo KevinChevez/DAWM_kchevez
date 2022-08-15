@@ -1,0 +1,60 @@
+{
+  "model": {
+    "type": "Object",
+    "value": {
+
+      "id": {
+        "type": "incrementNumber",
+        "options": {
+          "from": 1
+        }
+      },
+
+      "fecha_nacimiento": {
+        "type": "faker",
+        "value": "date.between",
+        "options": ["1986-01-02", "2000-12-29"]
+      },
+
+      "problemas": {
+        "type": "prepend",
+        "options": {
+          "text": "#"
+        },
+        "value": {
+          "type": "randomNumberBetween",
+          "value": [1, 2500]
+        }
+      },
+
+      "referencia_familiar": {
+        "type": "Object",
+        "value": {
+          "firstName": {
+            "type": "faker",
+            "value": "name.firstName"
+          },
+          "lastName": {
+            "type": "faker",
+            "value": "name.lastName"
+          }
+        }
+      },
+
+      "numero_de_Gustados": {
+        "type": "randomNumberBetween",
+        "value": [1, 25000]
+      },
+
+      "ciudad_Natal": {
+        "type": "faker",
+        "value": "address.city"
+      },
+
+      "Pais_Residencia": {
+        "type": "faker",
+        "value": "address.state"
+      }
+    }
+  }
+}
