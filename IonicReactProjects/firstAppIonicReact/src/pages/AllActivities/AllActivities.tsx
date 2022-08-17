@@ -1,9 +1,11 @@
 import React from "react";
 import {
+  IonButtons,
   IonCol,
   IonContent,
   IonGrid,
   IonHeader,
+  IonMenuButton,
   IonPage,
   IonRow,
   IonTitle,
@@ -15,6 +17,9 @@ const AllActivities: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
+          <IonButtons>
+              <IonMenuButton />
+          </IonButtons>
           <IonTitle>All Activities</IonTitle>
         </IonToolbar>
       </IonHeader>
