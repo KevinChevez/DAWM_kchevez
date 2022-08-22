@@ -7,7 +7,16 @@
 }
 
 .card-img {
-  height: 125px;
-  width: 125px;
+  height: 115px;
   object-fit: cover;
+  object-position: center;
+}
+
+.img_carrusel {
+  max-height: 22vh;
+  object-fit: cover;
+}
+
+.none_card {
+  display: none;
 }

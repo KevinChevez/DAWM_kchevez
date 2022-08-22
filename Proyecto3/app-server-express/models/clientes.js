@@ -2,6 +2,7 @@ const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('clientes', {
     cliente_id: {
+      autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
@@ -15,12 +16,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     cliente_address: {
-      type: DataTypes.CHAR(25),
+      type: DataTypes.CHAR(128),
       allowNull: false
-    },
-    cliente_telf: {
-      type: DataTypes.CHAR(15),
-      allowNull: true
     },
     cliente_rate: {
       type: DataTypes.DOUBLE,

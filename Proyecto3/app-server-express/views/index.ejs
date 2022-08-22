@@ -3,9 +3,30 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <body class="d-flex align-content-center justify-content-center">
+    <div class="card">
+      <div class="card-header bg-primary text-bg-primary">
+        <h1 class="text-center"><%= title %></h1>
+      </div>
+      <div class="card-body">
+        <p>Bienvenidos al servidor de mi proyecto #3 de <%= title %></p>
+        <p> <b> Nombre:</b> Kevin Isaac Chévez Coronel</p>
+        <p> <b> Paralelo:</b> 1</p>
+        <hr>
+        <div class="alert alert-primary" role="alert">
+          <p><b>Lista de rutas que pueden ser visitadas</b></p>
+          <ul class="list-group list-group-flush cursor-puntero">
+            <li class="list-group-item"> <a href="/clientes">/clientes</a> | <a href="/clientes/1">/clientes/id</a></li>
+            <li class="list-group-item"> <a href="/productos">/productos</a> | <a href="/productos/1">/productos/id</a> </li>
+            <li class="list-group-item"> <a href="/pedidos">/pedidos</a> | <a href="/pedidos/1">/pedidos/id</a> </li>
+            <li class="list-group-item"> <a href="/categorias">/categorias</a> | <a href="/categorias/1">/categorias/id</a> </li>
+            <li class="list-group-item"> <a href="/telefonos">/telefonos</a> | <a href="/telefonos/1">/telefonos/id</a> </li>
+            <li class="list-group-item"> <a href="/asig_compra">/asig_compra</a> | <a href="/asig_compra/1">/asig_compra/id</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

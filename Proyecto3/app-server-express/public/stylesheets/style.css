@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+
+.cursor-puntero {
+  cursor: pointer;
+  user-select: none;
+}

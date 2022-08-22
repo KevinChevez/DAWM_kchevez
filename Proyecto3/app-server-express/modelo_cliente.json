@@ -2,7 +2,6 @@
   "model": {
     "type": "Object",
     "value": {
-
       "id": {
         "type": "incrementNumber",
         "options": {
@@ -10,50 +9,62 @@
         }
       },
 
-      "fecha_nacimiento": {
+      "fecha_compra": {
         "type": "faker",
         "value": "date.between",
-        "options": ["1986-01-02", "2000-12-29"]
+        "options": ["2022-01-02", "2022-08-19"]
       },
 
-      "problemas": {
+      "num_problemas": {
         "type": "prepend",
         "options": {
           "text": "#"
         },
         "value": {
           "type": "randomNumberBetween",
-          "value": [1, 2500]
+          "value": [1, 100]
         }
       },
 
-      "referencia_familiar": {
+      "nombre_recomendador": {
         "type": "Object",
         "value": {
-          "firstName": {
+          "nombre": {
             "type": "faker",
             "value": "name.firstName"
           },
-          "lastName": {
+          "apellido": {
             "type": "faker",
             "value": "name.lastName"
           }
         }
       },
 
-      "numero_de_Gustados": {
+      "num_gustados": {
         "type": "randomNumberBetween",
-        "value": [1, 25000]
+        "value": [1, 2000]
       },
 
-      "ciudad_Natal": {
+      "ciudad_recomendada": {
         "type": "faker",
         "value": "address.city"
       },
 
-      "Pais_Residencia": {
-        "type": "faker",
-        "value": "address.state"
+      "productos_favoritos": {
+        "type": "randomElementsInArray",
+        "value": [
+          "Batido de Mora",
+          "Batido de Frutilla",
+          "Batido de Oreo",
+          "Batido de Banano",
+          "Batido de Papaya",
+          "Tostada de Queso",
+          "Tostada de Jamón",
+          "Tostada de Mortadela",
+          "Tostada de Mixta",
+          "Café expreso",
+          "Café con Leche"
+        ]
       }
     }
   }

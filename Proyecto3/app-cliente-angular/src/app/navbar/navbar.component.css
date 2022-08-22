@@ -5,3 +5,7 @@
 .nav-link {
   color: #fff4ea;
 }
+
+.logo {
+  border-radius: 0 25px 25px 0;
+}

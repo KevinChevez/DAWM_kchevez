@@ -1,44 +1,39 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('pedidos', {
-    pedido_id: {
+  return sequelize.define('asignacion', {
+    asignacion_id: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    cliente_id: {
+    pedido_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'clientes',
-        key: 'cliente_id'
+        model: 'pedidos',
+        key: 'pedido_id'
       }
     },
-    pedido_name: {
-      type: DataTypes.STRING(256),
+    producto_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'productos',
+        key: 'producto_id'
+      }
+    },
+    asignacion_cantidad: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
-    pedido_descript: {
-      type: DataTypes.TEXT,
-      allowNull: true
-    },
-    pedido_date: {
-      type: DataTypes.DATEONLY,
-      allowNull: false
-    },
-    pedido_total_price: {
+    asignacion_subtotal_price: {
       type: DataTypes.DOUBLE,
       allowNull: false
-    },
-    pedido_rate: {
-      type: DataTypes.DOUBLE,
-      allowNull: true,
-      defaultValue: 5
     }
   }, {
     sequelize,
-    tableName: 'pedidos',
+    tableName: 'asignacion',
     timestamps: false,
     indexes: [
       {
@@ -46,14 +41,21 @@ module.exports = function(sequelize, DataTypes) {
         unique: true,
         using: "BTREE",
         fields: [
+          { name: "asignacion_id" },
+        ]
+      },
+      {
+        name: "fk_asignacion_to_pedido",
+        using: "BTREE",
+        fields: [
           { name: "pedido_id" },
         ]
       },
       {
-        name: "fk_pedido_to_cliente",
+        name: "fk_asignacion_to_producto",
         using: "BTREE",
         fields: [
-          { name: "cliente_id" },
+          { name: "producto_id" },
         ]
       },
     ]
