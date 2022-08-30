@@ -17,6 +17,12 @@ var reportsRouter = require('./routes/reports');
 var session = require('express-session');
 var flush = require('connect-flash');
 
+//Referencia a middleware
+var auth = require('./middlewares/auth');
+
+//Referencia a  middleware de tracing
+var tracing = require('./middlewares/tracing');
+
 var app = express();
 
 // view engine setup
@@ -33,17 +39,23 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Using session variable
+// app.use(session({
+//   secret: 'secret',
+//   cookie: { maxAge: 60000 },
+//   resave: false,
+//   saveUninitialized: false,
+// }));
 app.use(session({
-  secret: 'secret',
-  cookie: { maxAge: 60000 },
-  resave: false,
+  secret: '2C44-4D44-WppQ38S',
+  resave: true,
   saveUninitialized: false,
+  // cookie: { maxAge: 60000 }
 }));
 app.use(flush());
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/login', loginRouter);
+app.use('/', auth, tracing,indexRouter);
+app.use('/users', usersRouter);
 app.use('/api', apiRouter);
 app.use('/reports', reportsRouter);
 

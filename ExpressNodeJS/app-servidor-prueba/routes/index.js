@@ -7,16 +7,16 @@ const Producto = require('../models').producto;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  if(req.session.valid){
+  // if(req.session.valid){
     res.render('index', { title: 'Express' });
-  }
-  else {
-    res.redirect('/login');
-  }
+  // }
+  // else {
+    // res.redirect('/login');
+  // }
 });
 
 router.get('/productos', (req, res, next) => {
-  if(req.session.valid){
+  // if(req.session.valid){
     Producto.findAll({
       attributes: {}
     })
@@ -26,9 +26,14 @@ router.get('/productos', (req, res, next) => {
     .catch(error => {
       res.status(400).send(error); 
     })
-  }else{
-    res.redirect('/login');
-  }
+  // }else{
+    // res.redirect('/login');
+  // }
 });
+
+// router.get('/out', function(req, res, next) { 
+//   req.session.destroy();
+//   res.redirect('/login')
+// });
 
 module.exports = router;

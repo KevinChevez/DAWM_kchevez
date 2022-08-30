@@ -1,0 +1,16 @@
+.cardInner {
+  margin: 30px;
+  max-width: 25vw;
+  height: 75vh;
+}
+
+.card {
+  margin: 10px 0 20px 0;
+  background-color: lightgrey;
+}
+
+.cardContent {
+  display: flex;
+  flex-wrap: wrap;
+
+}
