@@ -12,7 +12,7 @@
       role="tab"
       aria-controls="pills-home"
       aria-selected="true"
-      routerLink="/inicio-view"
+      routerLink="/inicio"
     >
       Inicio
     </button>
@@ -27,7 +27,7 @@
       role="tab"
       aria-controls="pills-orders"
       aria-selected="true"
-      routerLink="/ordenes-view"
+      routerLink="/ordenes"
     >
       Órdenes
     </button>
@@ -59,11 +59,11 @@
       Perfil
     </a>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" routerLink="/perfil-view">Ver perfil</a></li>
+      <li><a class="dropdown-item" routerLink="/perfil">Ver perfil</a></li>
       <li><a class="dropdown-item">Proyecto 3</a></li>
       <li><a class="dropdown-item">Kevin Chévez</a></li>
       <li><hr class="dropdown-divider" /></li>
-      <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+      <li><a class="dropdown-item" (click)="onClick()">Cerrar sesión</a></li>
     </ul>
   </li>
 </ul>

@@ -9,3 +9,10 @@ div {
   background-color: #ffc61a !important;
   color: #322a28 !important;
 }
+
+.imagen {
+  height: 35vh;
+  width: 100vw;
+  object-fit: cover;
+  object-position: bottom;
+}

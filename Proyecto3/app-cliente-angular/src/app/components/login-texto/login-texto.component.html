@@ -1,0 +1,65 @@
+<!-- Texto inicio de sesion -->
+<div class="carousel-caption carousel-caption-top px-3">
+  <h6 class="fs-6">{{sub_nombre_mainProd}}</h6>
+  <h3 class="fs-1">{{nombre_negocio}}</h3>
+  <p>{{slogan}}</p>
+</div>
+<div class="carousel-caption carousel-caption-bottom p-0 pt-3">
+  <form [formGroup]="loginForm" class="w-100 d-flex flex-column pt-3 rounded-2">
+    <mat-form-field appearance="fill" class="p-0 px-1 mb-3 contendor_form rounded-3">
+      <mat-label>Ingrese su correo</mat-label>
+      <input
+        matInput
+        placeholder="usuario@ejemplo.com"
+        required
+        formControlName="email"
+      />
+      <mat-error *ngIf="loginForm.invalid">{{ getErrorMessage(loginForm, 'email')}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="p-0 px-1 mb-3 contendor_form rounded-3">
+      <mat-label>Ingrese su contraseña</mat-label>
+      <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        required
+        formControlName="password"
+      />
+      <mat-error *ngIf="loginForm.invalid">{{ getErrorMessage(loginForm, 'password') }}</mat-error>
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <div class="container d-flex flex-column">
+      <button (click)="onSubmit()" mat-raised-button class="contendor_form" [disabled]="loginForm.invalid? true : false">
+        Ingresar
+      </button>
+      <button routerLink="/register" mat-raised-button class="contendor_form">
+        Registrarse
+      </button>
+    </div>
+
+    <!-- Campo condicional seleccione una categoria -->
+    <div class="d-flex justify-content-center">
+      <div
+        class="mt-4 p-1 alert alert-danger w-100"
+        role="alert"
+        *ngIf="!isRegistered"
+      >
+      <h4 class="p-0 m-0 text-center">
+        Correo o contraseña incorrecta.
+      </h4>
+      </div>
+    </div>
+    <!-- ------------------------------------------ -->
+  </form>
+<!-- ------------------------- -->
+</div>
+<!-- ------------------------- -->

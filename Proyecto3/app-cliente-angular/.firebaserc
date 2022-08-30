@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dbnr-kch-proy3-dawm": {
+      "hosting": {
+        "Proyecto3": [
+          "dbnr-kch-proy3-dawm"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dbnr-kch-proy3-dawm"
+  }
+}

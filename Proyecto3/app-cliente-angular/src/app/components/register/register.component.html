@@ -1,0 +1,111 @@
+<div
+  id="carruselLogin"
+  class="carousel slide carousel-fade"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="rounded-5 carousel-caption carousel-caption-top p-0">
+      <div class="align-self-center">
+        <img src="../../../assets/images/logo_maru.png" alt="Logo Maru" class="w-100 rounded-5">
+      </div>
+    </div>
+    <div class="carousel-caption carousel-caption-bottom p-0 pt-3">
+      <form [formGroup]="registerForm" class="w-100 d-flex flex-column pt-3 rounded-2">
+        <mat-form-field appearance="fill" class="p-0 px-1 mb-3 contendor_form rounded-3">
+          <mat-label>Ingrese su Email a registrar</mat-label>
+          <input
+            matInput
+            placeholder="usuario@ejemplo.com"
+            required
+            formControlName="email"
+          />
+          <mat-error *ngIf="registerForm.invalid">{{ getErrorMessage(registerForm, 'email')}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="p-0 px-1 mb-3 contendor_form rounded-3">
+          <mat-label>Ingrese su contraseña de registro</mat-label>
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            required
+            formControlName="password"
+          />
+          <mat-error *ngIf="registerForm.invalid">{{ getErrorMessage(registerForm, 'password') }}</mat-error>
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="p-0 px-1 mb-3 contendor_form rounded-3">
+          <mat-label>Confirme su contraseña de registro</mat-label>
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            required
+            formControlName="passwordConfirm"
+          />
+          <mat-error *ngIf="(registerForm.invalid)">{{ getErrorMessage(registerForm, 'passwordConfirm') }}</mat-error>
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+        <div class="container">
+          <button (click)="onSubmit()" mat-raised-button class="contendor_form" [disabled]="registerForm.invalid? true : false">
+            Registrarse
+          </button>
+        </div>
+
+        <!-- Campo condicional seleccione una categoria -->
+        <div class="d-flex justify-content-center">
+          <div
+            class="mt-4 alert alert-danger w-100"
+            role="alert"
+            *ngIf="isRegistered"
+          >
+          <h2 class="fs-4 text-center">
+            El correo ingresado ya se encuentra registrado.
+          </h2>
+          </div>
+        </div>
+        <!-- ------------------------------------------ -->
+      </form>
+    </div>
+
+    <!-- Imagen inicio de sesion con NGFOR -->
+    <div *ngFor="let bg of fondos" class="carousel-item {{ bg.isActive }}">
+      <div
+        class="overlay-image"
+        style='background-image: url("{{ bg.source }}")'
+      ></div>
+    </div>
+    <!-- ------------------------- -->
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carruselLogin"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carruselLogin"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+</div>

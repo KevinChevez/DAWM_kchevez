@@ -1,3 +1,21 @@
+.myclass {
+  height: 100vh;
+  align-content: space-evenly;
+}
+
+.carousel-item {
+  height: 100vh;
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-position: center;
+  background-size: cover;
+}
 
 .carousel-caption-top {
   padding-bottom: 0;
@@ -24,4 +42,9 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-style: italic;
+}
+
+.contendor_form {
+  background-color: #ffd864c2;
+  color: #372a28;
 }

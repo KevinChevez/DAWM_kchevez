@@ -1,0 +1,106 @@
+<app-navbar></app-navbar>
+<div class="container-fluid" *ngFor="let categ of categorias">
+  <div *ngIf="categSelected === categ.categoria_name">
+    <div class="row order_imagen col-12">
+      <img
+        class="p-0 imagen"
+        [src]="
+          srcImage == ''
+            ? getSrcImage(idProdSelected, categSelected, categ)
+            : srcImage
+        "
+        [alt]="categ.categoria_name"
+      />
+    </div>
+    <div class="px-4 row order_body col-12 pt-4">
+      <div class="col col-12">
+        <div class="row order_info col-12">
+          <div class="col order_text col-10">
+            <h1 class="m-0">{{ categ.categoria_name }}</h1>
+            <h4 class="m-0">
+              Disponible desde {{ categ.categoria_hora_start }} hasta
+              {{ categ.categoria_hora_end }}
+            </h4>
+            <div class="row group_resenias col-12">
+              <div class="col estrellas col-6">
+                <mat-icon class="m-0" *ngIf="1 <= categ.categoria_prom_rate"
+                  >star</mat-icon
+                >
+                <mat-icon class="m-0" *ngIf="2 <= categ.categoria_prom_rate"
+                  >star</mat-icon
+                >
+                <mat-icon class="m-0" *ngIf="3 <= categ.categoria_prom_rate"
+                  >star</mat-icon
+                >
+                <mat-icon class="m-0" *ngIf="4 <= categ.categoria_prom_rate"
+                  >star</mat-icon
+                >
+                <mat-icon class="m-0" *ngIf="5 <= categ.categoria_prom_rate"
+                  >star</mat-icon
+                >
+              </div>
+              <p class="col m-0 p-0 col-6 align-self-center">
+                {{ categ.categoria_prom_rate }} ( Gustados)
+              </p>
+            </div>
+            <p class="row col-12">
+              {{ categ.categoria_descript }}
+            </p>
+          </div>
+          <div class="col order_likes col-2 text-center">
+            <mat-icon class="m-0">favorite</mat-icon>
+            <p>{{ categ.categoria_liked }}</p>
+          </div>
+        </div>
+        <div class="pt-3 row order_optTitle col-12">
+          <p class="col m-0 p-0 col-5">Seleccione el sabor</p>
+          <div class="col divider align-self-center"></div>
+        </div>
+        <div role="tablist">
+          <div class="row my-2">
+            <button
+              *ngFor="let prods of categ.productos"
+              [class]="
+                idProdSelected == prods.producto_id.toString()
+                  ? 'active btn m-0 ms-3 col my_bg_yellow col-5 mb-3'
+                  : 'btn m-0 ms-3 col my_bg_yellow col-5 mb-3'
+              "
+              id="pills-{{ prods.producto_name }}-tab"
+              data-bs-toggle="pill"
+              [attr.data-bs-target]="'#pills-' + prods.producto_name"
+              type="button"
+              role="tab"
+              [attr.aria-controls]="'pills-' + prods.producto_name"
+              [attr.aria-selected]="prods.producto_name"
+              (click)="setSrcImage(prods.producto_src_img)"
+            >
+              {{ prods.producto_name }}
+            </button>
+          </div>
+        </div>
+        <button
+          class="row m-1 mt-4 mb-4 p-2 order_buy col-12 my_bg_light align-items-center rounded-4"
+        >
+          <div class="col col-2 text-center">
+            <mat-icon>shopping_cart</mat-icon>
+          </div>
+          <div class="col col-8">Ordenar ahora</div>
+          <div class="col col-2">| $0.75</div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Campo condicional seleccione una categoria -->
+<div
+  class="d-flex justify-content-center h-25 text-center p-3"
+  *ngIf="categSelected == '' || categSelected == undefined"
+>
+  <div class="mt-4 alert alert-danger w-75" role="alert">
+    <h2 class="fs-4 pt-2">
+      Para ver las órdenes disponibles debe seleccionar una categoría en
+      <a routerLink="/inicio">inicio</a>
+    </h2>
+  </div>
+</div>
+<!-- ------------------------------------------ -->

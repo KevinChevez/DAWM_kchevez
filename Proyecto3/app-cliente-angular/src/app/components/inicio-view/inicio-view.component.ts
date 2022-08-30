@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriaService } from '../services/categoria.service';
+import { CategoriaService } from '../../services/categoria.service';
 
 // Interfaces a usar
-import { Producto } from '../interface/producto';
-import { Categoria } from './../interface/categoria';
+import { Producto } from '../../interface/producto';
+import { Categoria } from '../../interface/categoria';
 
 @Component({
   selector: 'app-inicio-view',
@@ -13,7 +13,6 @@ import { Categoria } from './../interface/categoria';
 export class InicioViewComponent implements OnInit {
   seleccion: number = 0;
   categorias: Categoria[];
-  categoria: Categoria;
 
   constructor(private categoriaService: CategoriaService){
     // Inicializo por defecto el arreglo de categorias
@@ -33,20 +32,6 @@ export class InicioViewComponent implements OnInit {
         productos: [] as Producto[],
       }
     }
-    // Inicializo por defecto el objeto Categoria
-    this.categoria = {
-      categoria_id: -1,
-      categoria_name: "",
-      categoria_descript: "",
-      categoria_min_price: -1,
-      categoria_max_price: -1,
-      categoria_src_img: "",
-      categoria_prom_rate: -1,
-      categoria_hora_start: "",
-      categoria_hora_end: "",
-      categoria_liked: -1,
-      productos: [] as Producto[],
-    }
   }
 
   ngOnInit(): void {
@@ -55,10 +40,6 @@ export class InicioViewComponent implements OnInit {
       this.categorias = arr_categorias;
       console.log(this.categorias);
     })
-  }
-
-  handleSelectorCateg(){
-    console.log(this.seleccion)
   }
 
 }
