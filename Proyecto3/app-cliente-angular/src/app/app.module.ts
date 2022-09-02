@@ -27,7 +27,7 @@ import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 
 // Imports para uso de Firebase en login
-import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideAuth, getAuth, AuthModule } from '@angular/fire/auth';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { RegisterComponent } from './components/register/register.component';
@@ -61,6 +61,7 @@ import { InfoViewComponent } from './components/info-view/info-view.component';
     FormsModule,
     MatFormFieldModule,
     ReactiveFormsModule,
+    AuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
   ],
