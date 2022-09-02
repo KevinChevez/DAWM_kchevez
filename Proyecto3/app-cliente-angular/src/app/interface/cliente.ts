@@ -6,6 +6,8 @@ export interface Cliente {
   cliente_rate: number;
   cliente_ncomment: number;
   cliente_nliked: number;
+  firebase_id: string;
+  img_perfil_name: string;
   telefonos_compradores: any[];
   pedidos: any[];
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriaService } from '../../services/categoria.service';
+import { CategoriaService } from '../../services/categoria/categoria.service';
 
 // Interfaces a usar
 import { Producto } from '../../interface/producto';

@@ -1,3 +1,4 @@
+import { UsuarioService } from './../../services/usuario/usuario.service';
 import { Router } from '@angular/router';
 import { LoginService } from './../../services/login/login.service';
 import { Component, OnInit } from '@angular/core';
@@ -21,7 +22,7 @@ export class LoginTextoComponent implements OnInit {
   slogan:string = "¿Y si nos pegamos un batido con tostadas?";
 
 
-  constructor(private loginService: LoginService, private router: Router) { }
+  constructor(private userService: UsuarioService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -30,9 +31,11 @@ export class LoginTextoComponent implements OnInit {
     let email = this.loginForm.value.email;
     let password = this.loginForm.value.password;
     if(email && password){
-      this.loginService.login(email, password)
+      this.userService.login(email, password)
         .then((respuesta) => {
           console.log(respuesta);
+          console.log(respuesta.user.uid);
+          this.userService.setUserFireId();
           this.router.navigate(['/inicio']);
         })
         .catch(error => {

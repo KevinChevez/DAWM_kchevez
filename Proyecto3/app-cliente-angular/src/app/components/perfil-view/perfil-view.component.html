@@ -5,10 +5,10 @@
     <div
       id="imagen"
       class="imagen_perfil"
-      style="background-image: url(../../assets/images/img_perfil.jpeg)"
+      [style]="'background-image: url(../../assets/images/'+cliente.img_perfil_name+')'"
     ></div>
     <div id="footer_img" class="mt-3 text-center">
-      <h1 class="m-0">{{ bd.nombre }} {{ bd.apellido }}</h1>
+      <h1 class="m-0">{{ cliente.cliente_fname }} {{ cliente.cliente_lname }}</h1>
       <h2>Cliente</h2>
     </div>
   </div>
@@ -22,7 +22,7 @@
           <mat-icon class="my_bg_yellow">shopping_cart</mat-icon>
         </div>
         <div class="row justify-content-center">
-          {{ bd.num_compras }}<br />
+          {{ cliente.pedidos.length }}<br />
           <p class="text-center">Compras</p>
         </div>
       </div>
@@ -32,7 +32,7 @@
           <mat-icon class="my_bg_rose_light">star</mat-icon>
         </div>
         <div class="row justify-content-center">
-          {{ bd.rate_to_app }}<br />
+          {{ cliente.cliente_rate }}<br />
           <p class="text-center">Calificación</p>
         </div>
       </div>
@@ -44,7 +44,7 @@
           <mat-icon class="my_bg_rose">favorite</mat-icon>
         </div>
         <div class="row justify-content-center">
-          {{ bd.num_compras }}<br />
+          {{ cliente.cliente_nliked }}<br />
           <p class="text-center">Gustados</p>
         </div>
       </div>
@@ -54,7 +54,7 @@
           <mat-icon class="my_bg_dark">forum</mat-icon>
         </div>
         <div class="row justify-content-center">
-          {{ bd.rate_to_app }}<br />
+          {{ cliente.cliente_ncomment }}<br />
           <p class="text-center">Reseñas</p>
         </div>
       </div>

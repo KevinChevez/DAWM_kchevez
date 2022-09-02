@@ -31,6 +31,14 @@ module.exports = function(sequelize, DataTypes) {
     cliente_nliked: {
       type: DataTypes.INTEGER,
       allowNull: true
+    },
+    firebase_id: {
+      type: DataTypes.STRING(128),
+      allowNull: true
+    },
+    img_perfil_name: {
+      type: DataTypes.STRING(128),
+      allowNull: true
     }
   }, {
     sequelize,

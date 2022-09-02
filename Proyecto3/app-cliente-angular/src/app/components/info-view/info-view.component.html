@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<!-- Campo del selector -->
+<mat-form-field
+  appearance="fill"
+  class="my_primary_color pt-3 container-fluid d-block text-center"
+>
+  <mat-label>Seleccione los productos que a filtrar</mat-label>
+  <mat-select class="my_primary_color w-75" [formControl]="selecciones" multiple>
+    <mat-option>Ninguno</mat-option>
+    <mat-option *ngFor="let producto of productos" [value]="producto.producto_name"  (click)="setFbUsersFiltered(fbUsers, selecciones.value)">
+      {{ producto.producto_name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<!-- ------------------ -->
+
+<!-- Campo condicional seleccione una categoria -->
+<div class="d-flex justify-content-center">
+  <div
+    *ngIf="selecciones.toString()!= '' || selecciones != undefined"
+  >
+    <div *ngFor="let fbUser of fbUsersFiltered">
+      <mat-card class="m-3 my_bg_yellow">
+        <mat-card-title>{{fbUser.id}}</mat-card-title>
+        <mat-card-subtitle>{{fbUser.ciudad_recomendada}}</mat-card-subtitle>
+        <mat-card-content>
+          <p> <b>Última fecha de compra: </b> {{fbUser.fecha_compra}}</p>
+          <p>Esta persona le ha gustado nuestros productos unas {{fbUser.num_gustados}} veces.</p>
+          <p>Ha tenido {{fbUser.num_problemas}} problemas. :/</p>
+          <p>Entre sus productos favoritos se encuentran los siguientes: </p>
+          <ul class="">
+            <li class="" *ngFor="let prod of fbUser.productos_favoritos">{{prod}}</li>
+          </ul>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Me gusta</button>
+          <button mat-button>Compartir</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<!-- ------------------------------------------ -->

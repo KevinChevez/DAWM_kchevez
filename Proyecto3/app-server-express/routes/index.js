@@ -31,6 +31,29 @@ router.get('/clientes', function(req, res, next) {
  })
  .catch(error => res.status(400).send(error))
 });
+router.post('/clientes', function(req, res, next) {
+  let p_fireid_cliente = req.body.fireid;
+  console.log(p_fireid_cliente);
+  models.clientes.findOne({
+    include: [
+      { 
+        model: models.telefonos_compradores,
+        as: 'telefonos_compradores',
+      },
+      { 
+        model: models.pedidos,
+        as: 'pedidos'
+      }
+    ],
+    where: {
+      firebase_id: p_fireid_cliente
+    }
+  })
+ .then(cliente => {
+    res.json(cliente)
+ })
+ .catch(error => res.status(400).send(error))
+});
 router.get('/clientes/:id', function(req, res, next) {
   let p_id_cliente = req.params.id;
   models.clientes.findOne({

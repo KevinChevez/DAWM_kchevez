@@ -1,3 +1,4 @@
+import { InfoViewComponent } from './components/info-view/info-view.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:"inicio", component: InicioViewComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
   {path:"ordenes", component: OrdenesViewComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
   {path:"perfil", component: PerfilViewComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
+  {path:"info", component: InfoViewComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
   {path:"ordenes/:categoria", component: OrdenesViewComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
   {path:"ordenes/:categoria/:id", component: OrdenesViewComponent, ...canActivate(()=> redirectUnauthorizedTo(['/login']))},
   {path:"**", redirectTo:"login"},

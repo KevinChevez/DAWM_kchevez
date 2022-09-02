@@ -1,3 +1,4 @@
+import { UsuarioService } from './../../services/usuario/usuario.service';
 import { RegisterService } from './../../services/register/register.service';
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
@@ -23,7 +24,7 @@ export class RegisterComponent implements OnInit {
   ];
 
 
-  constructor(private registerService: RegisterService, private router: Router) {
+  constructor(private userService: UsuarioService, private router: Router) {
     let passwordConfControl = this.registerForm.get('passwordConfirm') as FormControl;
     passwordConfControl.addValidators(this.createCompareValidator(this.registerForm.get('password') as AbstractControl, this.registerForm.get('passwordConfirm') as AbstractControl));
   }
@@ -35,9 +36,11 @@ export class RegisterComponent implements OnInit {
     let email = this.registerForm.value.email;
     let password = this.registerForm.value.password;
     if(email && password){
-      this.registerService.register(email, password)
+      this.userService.register(email, password)
       .then(response => {
         console.log(response);
+        console.log(response.user.uid);
+        this.userService.setUserFireId();
         this.router.navigate(['/inicio']);
       })
       .catch(error => {

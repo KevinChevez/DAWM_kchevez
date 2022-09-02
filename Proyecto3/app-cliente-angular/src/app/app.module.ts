@@ -31,6 +31,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { RegisterComponent } from './components/register/register.component';
+import { InfoViewComponent } from './components/info-view/info-view.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { RegisterComponent } from './components/register/register.component';
     NavbarComponent,
     PerfilViewComponent,
     RegisterComponent,
+    InfoViewComponent,
   ],
   imports: [
     MatInputModule,

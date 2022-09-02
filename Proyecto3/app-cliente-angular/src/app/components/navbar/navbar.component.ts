@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
   inHome:string = "";
   inOrders:string = "";
   inPerfil:string = "";
+  inInfo: string = "";
 
   constructor( private rutaActiva: ActivatedRoute, private logoutService: LogoutService, private router: Router ) {
   }
@@ -33,6 +34,9 @@ export class NavbarComponent implements OnInit {
     }
     else if(this.rutaActiva.snapshot.url.toString().localeCompare("perfil") === 0){
       this.inPerfil = "active";
+    }
+    else if(this.rutaActiva.snapshot.url.toString().localeCompare("info") === 0){
+      this.inInfo = "active";
     }
   }
 
